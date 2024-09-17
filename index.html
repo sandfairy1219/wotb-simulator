@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상자 선택</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+            color: #444;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .box {
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .box h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>상자 선택</h1>
+    <div class="box-container">
+        <div class="box" onclick="location.href='blackbox.html'">
+            <h2>블랙 상자</h2>
+            <img src="img/blackbox.jpg" alt="블랙 상자">
+        </div>
+        <div class="box" onclick="location.href='mysterybox.html'">
+            <h2>미스터리 상자</h2>
+            <img src="img/mysterybox.jpg" alt="미스터리 상자">
+        </div>
+        <div class="box" onclick="location.href='cta.html'">
+            <h2>모두 모아보세요 상자</h2>
+            <img src="img/cta.jpg" alt="모두 모아보세요 상자">
+        </div>
+        <div class="box" onclick="location.href='mega.html'">
+            <h2>메가 상자</h2>
+            <img src="img/mega.jpg" alt="메가 상자">
+        </div>
+        <div class="box" onclick="location.href='awc.html'">
+            <h2>끝내줘요 상자</h2>
+            <img src="img/awc.jpg" alt="끝내줘요 상자">
+        </div>
+</body>
+</html>

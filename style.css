@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#open, #log, #reset, #delete {
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #000; /* 검은색 배경 */
+    color: #fff; /* 흰색 글자 */
+    border: none;
+    cursor: pointer;
+}
+
+#open, #log, #reset, #delete:hover {
+    background-color: #333; /* 호버 시 어두운 회색 */
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+#result, #times, #goldreturn, #usegold {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#log-container {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px; /* 폰트 크기 키움 */
+}
+
+#log-container div {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#log-container div:last-child {
+    border-bottom: none;
+}
+
+
+
+#slid {
+    text-align: center;
+    font-size: 20px; 
+}
+
+
+#delete {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#delete:hover {
+    background-color: #ff1a1a;
+}
+
+#goldreturn, #usegold, #finalgold , #mc,  #slider, #sliderValue, #tanks{
+    display: block;
+    text-align: center;
+    font-size: 20px; /* 폰트 크기 키움 */
+    margin: 5px auto;
+}
+
+
+
+
+#slid{
+    margin-left: 40%;
+    display: inline;
+}
+
+#settings {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff; /* 검은색 배경 */
+    color: #000000; /* 흰색 글자 */
+    border: 1px solid #000000;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#settingsPage {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: #fff; /* 일반 모드 배경색 */
+    color: #000; /* 일반 모드 글자색 */
+    border: 1px solid #000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .box {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+body.dark-mode input[type="range"] {
+    background-color: #333333;
+}
+
+body.dark-mode select {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+body.dark-mode span {
+    color: #ffffff;
+}
+
+body.dark-mode #settingsPage {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #000; /* 검은색 배경 */
+    color: #fff; /* 흰색 글자 */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+body.dark-mode #result,
+body.dark-mode #log-container {
+    background-color: #444444; /* 회색 배경 */
+    color: #ffffff; /* 흰색 글자 */
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}

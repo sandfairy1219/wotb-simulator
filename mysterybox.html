@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미스터리상자</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="settings">설정</button>
+    <button id="back">돌아가기</button>
+    <h1>미스터리 상자</h1>
+    <select id="box">
+        <option value="1" id="blackbox">상자 종류 선택</option>
+        <option value="2" id="blackbox">블랙 상자</option>
+        <option value="3" id="mysterybox">미스터리 상자</option>
+        <option value="4" id="cta">모두 모아보세요 상자</option>
+        <option value="5" id="mega">메가 상자</option>
+        <option value="6">끝내줘요 상자</option>
+    </select>
+    <br><br>
+    <img src="img/mysterybox.jpg" width="300px">
+    <button id="open">뽑기</button>
+    <button id="log">로그</button>
+    <div id="result">결과 : </div><br><br>
+    <div id="times"></div><br>
+    <span id="mc"></span>
+    
+    <div id="log-container"></div><br>
+    <br>
+    <button id="reset">초기화</button>
+    <button id="delete">로그 비우기</button>
+    <div id="settingsPage">
+        <span>화면 자동 내림</span>
+        <input type="checkbox" id="autoslide">
+        <br>
+        <span>다크 모드</span>
+        <input type="checkbox" id="darkmode">
+    </div>
+    <script src="mysterybox.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

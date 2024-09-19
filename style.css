@@ -36,7 +36,7 @@ img {
     margin: 20px auto;
 }
 
-#result, #times, #goldreturn, #usegold {
+#result, #times, #goldreturn, #usegold, #usedgold {
     text-align: center;
     font-size: 18px;
     margin: 10px 0;
@@ -87,7 +87,7 @@ img {
     background-color: #ff1a1a;
 }
 
-#goldreturn, #usegold, #finalgold , #mc,  #slider, #sliderValue, #tanks{
+#goldreturn, #usegold, #finalgold , #mc,  #slider, #sliderValue, #tanks, #usedgold{
     display: block;
     text-align: center;
     font-size: 20px; /* 폰트 크기 키움 */

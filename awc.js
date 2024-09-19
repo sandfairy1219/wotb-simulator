@@ -6,6 +6,11 @@ const container = document.getElementById('log-container');
 let tanks = [];
 const finaltanks = document.getElementById('tanks');
 
+const blackbox = document.querySelector('.blackbox');
+const mysterybox = document.querySelector('.mysterybox');
+const cta = document.querySelector('.cta');
+
+
 
 function updateFinalTanks() {
     finaltanks.innerText = '획득한 탱크: ' + tanks.join(', ');
@@ -20,6 +25,9 @@ function addTank(tank) {
 function awc(){
     const items = []
 
+    let blackboxcount = 0;
+    let mysteryboxcount = 0;
+    let ctacount = 0;
 
     items.push('끝내줘요! 부적');
 
@@ -89,8 +97,10 @@ function awc(){
         items.push('모두 모아보세요 상자');
     }else if(randomcrate < 16.67 + 16.67){
         items.push('블랙 상자 I');
+        
     }else if(randomcrate < 16.67 + 16.67 + 16.67){
         items.push('미스터리 상자 ');
+        
     }
 
     const randomkey = Math.random() * 100;
@@ -321,6 +331,8 @@ box.addEventListener('change', function() {
         window.location.href = '/mega.html';
     } else if (box.value == '6') {
         window.location.href = '/awc.html'
+    } else if (box.value == '7') {
+        window.location.href = '/massive.html';
     }
 });
 

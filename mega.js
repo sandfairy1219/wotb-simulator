@@ -452,6 +452,8 @@ box.addEventListener('change', function() {
         window.location.href = '/mega.html';
     } else if (box.value == '6') {
         window.location.href = '/awc.html'
+    } else if (box.value == '7') {
+        window.location.href = '/massive.html';
     }
 });
 

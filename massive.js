@@ -478,4 +478,5 @@ reset.addEventListener('click', function() {
     finaltanks.innerText = '획득한 탱크: ';
     finalboxes.innerText = '획득한 상자: ';
     howmuch = 0;
+    tanks = [];
 });

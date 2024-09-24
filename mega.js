@@ -467,4 +467,5 @@ reset.addEventListener('click', function() {
     finalgold.innerText = `총 골드량: ${gold}`;
     finaltanks.innerText = '획득한 탱크: ';
     howmuch = 0;
+    tanks = [];
 });

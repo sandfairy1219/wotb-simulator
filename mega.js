@@ -406,7 +406,7 @@ let open = document.getElementById('open')
 open.addEventListener('click', function() {
     const items = megabox();
     const resultElement = document.getElementById('result');
-    if (items.includes('(X)', '(IX)' , '(VIII)', '(VII)', '(VI)', '(V)')) {
+    if (items.includes(items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)')))) {
         resultElement.style.color = 'red';
         resultElement.style.backgroundColor = 'aqua';
     } else {

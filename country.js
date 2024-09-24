@@ -371,6 +371,8 @@ reset.addEventListener('click', function() {
     times.innerText = `상자를 깐 횟수: ${opentimes}`;
     finaltanks.innerText = '획득한 탱크: ';
     howmuch = 0;
+    tanks = [];
+
 });
 
 let box = document.getElementById('box');

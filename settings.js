@@ -69,13 +69,13 @@ const translations = {
     },
     'ctaBox': {
         'ko': '모두모아보세요상자',
-        'en': 'Collect All Box',
+        'en': 'Collect Em All Box',
         'jp': 'すべて集めるボックス',
         'ch': '收集所有盒子'
     },
     'megaBox': {
         'ko': '메가상자',
-        'en': 'Mega Box',
+        'en': 'Mega container',
         'jp': 'メガボックス',
         'ch': '巨型盒子'
     },
@@ -183,7 +183,7 @@ const translations = {
     },
     'freeExp': {
         'ko': '자유 경험치',
-        'en': 'Free Experience',
+        'en': 'Free xp',
         'jp': '自由経験値',
         'ch': '自由经验'
     },

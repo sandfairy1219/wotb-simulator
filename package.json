@@ -1,44 +1,19 @@
 {
   "name": "simulator",
   "version": "1.0.0",
-  "main": "electron.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "dev": "nodemon --exec electron .",
-    "dist": "electron-builder --dir"
-  },
-  "build": {
-    "appId": "com.sandfairy1219.app",
-    "productName": "Srate Simulator",
-    "win": {
-      "target": "nsis"
-    },
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/**/*",
-      "node_modules/**/*",
-      "electron.js"
-    ],
-    "extraResources": [
-      {
-        "from": "src/assets",
-        "to": "assets"
-      }
-    ]
+    "start": "node express .",
+    "dev": "nodemon ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.0"
   },
   "devDependencies": {
-    "electron": "^32.1.0",
-    "electron-builder": "^25.0.5",
     "nodemon": "^3.1.4"
   }
 }

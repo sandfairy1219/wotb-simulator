@@ -106,6 +106,8 @@ box.addEventListener('change', function() {
         window.location.href = '/awc.html'
     } else if (box.value == '7') {
         window.location.href = '/massive.html';
+    } else if (box.value == '8') {
+        window.location.href = '/country.html';
     }
 });
 

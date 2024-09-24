@@ -443,17 +443,19 @@ log.addEventListener('click', function() {
 let box = document.getElementById('box');
 box.addEventListener('change', function() {
     if (box.value == '1' || box.value == '2') {
-        window.location.href = '/blackbox.html';
+        window.location.href = '/blackbox';
     } else if (box.value == '3') {
-        window.location.href = '/mysterybox.html';
+        window.location.href = '/mysterybox';
     } else if (box.value == '4') {
-        window.location.href = '/cta.html';
+        window.location.href = '/cta';
     } else if (box.value == '5') {
-        window.location.href = '/mega.html';
+        window.location.href = '/mega';
     } else if (box.value == '6') {
-        window.location.href = '/awc.html'
+        window.location.href = '/awc'
     } else if (box.value == '7') {
-        window.location.href = '/massive.html';
+        window.location.href = '/massive';
+    } else if (box.value == '8') {
+        window.location.href = '/country.html';
     }
 });
 

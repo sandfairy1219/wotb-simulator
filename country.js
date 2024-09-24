@@ -187,36 +187,46 @@ reset.addEventListener('click', function() {
 let box = document.getElementById('box');
 box.addEventListener('change', function() {
     if (box.value == '1' || box.value == '2') {
-        window.location.href = '/blackbox';
+        window.location.href = '/blackbox.html';
     } else if (box.value == '3') {
-        window.location.href = '/mysterybox';
+        window.location.href = '/mysterybox.html';
     } else if (box.value == '4') {
-        window.location.href = '/cta';
+        window.location.href = '/cta.html';
     } else if (box.value == '5') {
-        window.location.href = '/mega';
+        window.location.href = '/mega.html';
     } else if (box.value == '6') {
         window.location.href = '/awc'
     } else if (box.value == '7') {
-        window.location.href = '/massive';
+        window.location.href = '/massive.html';
+    } else if(box.value == '8') {
+        window.location.href = '/country';
     }
 });
 
 
 slider.addEventListener('input', function() {
+    const containerimg = document.getElementById('containerimg');
     if (slider.value == 1) {
         slid.innerText = '독일 상자';
+        containerimg.src = "img/country.jpg";
     }else if (slider.value == 2) {
         slid.innerText = '미국 상자';
+        containerimg.src = "img/usa.jpg";
     }else if (slider.value == 3) {
         slid.innerText = '소련 상자';
+        containerimg.src = "img/ussr.jpg";
     }else if (slider.value == 4) {
         slid.innerText = '영국 상자';
+        containerimg.src = "img/uk.jpg";
     }else if (slider.value == 5) {
-        slid.innerText = '중국 상자';   
+        slid.innerText = '중국 상자';
+        containerimg.src = "img/chinese.jpg";   
     }else if (slider.value == 6) {
         slid.innerText = '프랑스 상자';
+        containerimg.src = "img/france.jpg";
     }else if (slider.value == 7) {
         slid.innerText = '유럽 상자';
+        containerimg.src = "img/europe.jpg";
     }
 });
 
@@ -258,7 +268,6 @@ open.addEventListener('click', function() {
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }
 });
-
 
 
 

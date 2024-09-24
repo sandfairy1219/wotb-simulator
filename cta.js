@@ -360,6 +360,8 @@ reset.addEventListener('click', function() {
     usegold.textContent = `사용한 골드량 : ${usedgold}`;
     times.innerText = `상자를 깐 횟수: ${howmuch}회`;
     finalgold.textContent = `총 사용 골드량 : ${usedgold - gold}`;
+    tanks = [];
+    updateFinalTanks()
     ;
 });
 

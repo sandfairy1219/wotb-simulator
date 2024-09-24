@@ -479,4 +479,5 @@ reset.addEventListener('click', function() {
     finalboxes.innerText = '획득한 상자: ';
     howmuch = 0;
     tanks = [];
+    boxes = [];
 });

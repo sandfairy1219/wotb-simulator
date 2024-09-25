@@ -646,17 +646,17 @@ if(randomGold < 20){
     const randomBooster = Math.random() * 100;
     if (randomBooster < 12.5) {
         items.push('골드 부스터 7개'); // 12.5% 확률
-    } else if (randonbooster < 25) {
+    } else if (randomBooster < 25) {
         items.push('골드 부스터 8개'); // 12.5% 확률
-    } else if (randonbooster < 37.5) {
+    } else if (randomBooster < 37.5) {
         items.push('골드 부스터 9개'); // 12.5% 확률
-    } else if (randonbooster < 50) {
+    } else if (randomBooster < 50) {
         items.push('골드 부스터 10개'); // 12.5% 확률
-    } else if (randonbooster < 62.5) {
+    } else if (randomBooster < 62.5) {
         items.push('골드 부스터 11개'); // 12.5% 확률
-    } else if (randonbooster < 75) {
+    } else if (randomBooster < 75) {
         items.push('골드 부스터 12개'); // 12.5% 확률
-    } else if (randonbooster < 87.5) {
+    } else if (randomBooster < 87.5) {
         items.push('골드 부스터 13개'); // 12.5% 확률
     } else {
         items.push('골드 부스터 14개'); // 12.5% 확률

@@ -4,12 +4,21 @@ const finalgold = document.getElementById('finalgold');
 let gold = 0;
 const container = document.getElementById('log-container');
 let tanks = [];
+let boxes = [];
 const finaltanks = document.getElementById('tanks');
 
 const blackbox = document.querySelector('.blackbox');
 const mysterybox = document.querySelector('.mysterybox');
 const cta = document.querySelector('.cta');
 
+function addBox(box) {
+    boxes.push(box);
+    updateFinalBoxes();
+}
+
+function updateFinalBoxes() { 
+    finalboxes.innerText = '획득한 상자: ' + boxes.join(', ');
+}
 
 
 function updateFinalTanks() {
@@ -95,12 +104,13 @@ function awc(){
     const randomcrate = Math.random() * 100;
     if(randomcrate < 16.67){
         items.push('모두 모아보세요 상자');
+        addBox('모두 모아보세요 상자');
     }else if(randomcrate < 16.67 + 16.67){
         items.push('블랙 상자 I');
-        
+        addBox('블랙 상자 I');
     }else if(randomcrate < 16.67 + 16.67 + 16.67){
         items.push('미스터리 상자 ');
-        
+        addBox('미스터리 상자');
     }
 
     const randomkey = Math.random() * 100;
@@ -337,6 +347,8 @@ box.addEventListener('change', function() {
         window.location.href = '/massive.html';
     } else if (box.value == '8') {
         window.location.href = '/country.html';
+    } else if (box.value == '9') {
+        window.location.href = '/tank.html';
     }
 });
 

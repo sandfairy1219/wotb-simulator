@@ -391,6 +391,8 @@ box.addEventListener('change', function() {
         window.location.href = '/massive.html';
     } else if(box.value == '8') {
         window.location.href = '/country';
+    } else if (box.value == '9') {
+        window.location.href = '/tank.html';
     }
 });
 

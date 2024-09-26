@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대규모 상자</title>
+    <title>탱크 상자</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -11,7 +11,7 @@
 <body>
     <button id="settings">설정</button>
     <button id="back">돌아가기</button>
-    <h1>대규모 상자</h1>
+    <h1>탱크 상자</h1>
     <select id="box">
         <option value="1" id="blackbox">상자 종류 선택</option>
         <option value="2" id="blackbox">블랙 상자</option>
@@ -24,14 +24,14 @@
         <option value="9">탱크 상자</option>
     </select>
     <br><br>
-    <img src="img/massive.jpg" width="300px">
+    <img src="img/tank.jpg" width="300px">
     <button id="open">뽑기</button>
     <button id="log">로그</button>
     <div id="result">결과 : </div><br><br>
     <div id="times"></div>
+    <span id="finalgold"></span>
     <span id="tanks"></span>
     <span id="finalboxes"></span>
-    <span id="usedgold"></span>
     <br>
     <span id="mc"></span>
     
@@ -48,7 +48,7 @@
         <input type="checkbox" id="darkmode">
     </div>
 
-    <script src="massive.js"></script>
+    <script src="tank.js"></script>
     <script src="settings.js"></script>
 </body>
 </html>

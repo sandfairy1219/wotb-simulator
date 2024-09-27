@@ -1007,39 +1007,9 @@ function blackboxlv10() {
     return items;
 }
 
-let box = document.getElementById('box');
-box.addEventListener('change', function() {
-    if (box.value == '1' || box.value == '2') {
-        window.location.href = '/blackbox.html';
-    } else if (box.value == '3') {
-        window.location.href = '/mysterybox.html';
-    } else if (box.value == '4') {
-        window.location.href = '/cta.html';
-    } else if (box.value == '5') {
-        window.location.href = '/mega.html';
-    } else if (box.value == '6') {
-        window.location.href = '/awc.html'
-    } else if (box.value == '7') {
-        window.location.href = '/massive.html';
-    } else if (box.value == '8') {
-        window.location.href = '/country.html';
-    } else if (box.value == '9') {
-        window.location.href = '/tank.html';
-    }
-});
 
-let log = document.getElementById('log');
-log.addEventListener('click', function() {
-    if (container.style.display === 'none') {
-        container.style.display = 'block';
-        deleteButton.style.display = 'block';
-    }
-    else {
-        container.style.display = 'none';
-        deleteButton.style.display = 'none';
-    }
-    
-});
+
+
 const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');
 
@@ -1212,10 +1182,7 @@ open.addEventListener('click', function() {
 );
         
 
-let deleteButton = document.getElementById('delete');
-deleteButton.addEventListener('click', function() {
-    container.innerHTML = '';
-});
+
 
 const reset = document.getElementById('reset');
 reset.addEventListener('click', function() {

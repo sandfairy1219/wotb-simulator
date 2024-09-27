@@ -227,16 +227,44 @@ function changeLanguage(language) {
     });
 }
 
-// 4. 이벤트 리스너 추가
-// languageSelect.addEventListener('change', (event) => {
-//     const selectedLanguage = event.target.value;
-//     changeLanguage(selectedLanguage);
-// });
 
-// 5. 페이지 로드 시 기본 언어 설정
-// document.addEventListener('DOMContentLoaded', () => {
-//     const defaultLanguage = 'ko'; // 기본 언어 설정
-//     languageSelect.value = defaultLanguage;
-//     changeLanguage(defaultLanguage);
-// });
 
+// 모든 html 공통
+let box = document.getElementById('box');
+box.addEventListener('change', function() {
+    if (box.value == '1' || box.value == '2') {
+        window.location.href = '/blackbox.html';
+    } else if (box.value == '3') {
+        window.location.href = '/mysterybox.html';
+    } else if (box.value == '4') {
+        window.location.href = '/cta.html';
+    } else if (box.value == '5') {
+        window.location.href = '/mega.html';
+    } else if (box.value == '6') {
+        window.location.href = '/awc.html'
+    } else if (box.value == '7') {
+        window.location.href = '/massive.html';
+    } else if (box.value == '8') {
+        window.location.href = '/country.html';
+    } else if (box.value == '9') {
+        window.location.href = '/tank.html';
+    }
+});
+
+let log = document.getElementById('log');
+log.addEventListener('click', function() {
+    if (container.style.display === 'none') {
+        container.style.display = 'block';
+        deleteButton.style.display = 'block';
+    }
+    else {
+        container.style.display = 'none';
+        deleteButton.style.display = 'none';
+    }
+    
+});
+
+let deleteButton = document.getElementById('delete');
+deleteButton.addEventListener('click', function() {
+    container.innerHTML = '';
+});

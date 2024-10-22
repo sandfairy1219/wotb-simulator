@@ -34,3 +34,7 @@ app.get('/mega', (req, res) => {
 app.get('/mysterybox', (req, res) => {
     res.sendFile(path.join(__dirname,'mysterybox.html'));
 });
+
+app.get('/tank', (req, res) => {
+    res.sendFile(path.join(__dirname,'tank.html'));
+});

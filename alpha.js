@@ -254,7 +254,7 @@ function alpha(){
 
 let open = document.getElementById('open')
 open.addEventListener('click', function() {
-    const items = awc();
+    const items = alpha();
     const resultElement = document.getElementById('result');
     if (items.some(item => item.includes('(X)') || item.includes('위장'))) {
         resultElement.style.color = 'red';

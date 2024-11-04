@@ -110,16 +110,23 @@ slider.addEventListener('input', function() {
 
 let open = document.getElementById('open')
 open.addEventListener('click', function() {
-    const items = mysteryBox();
-    const resultElement = document.getElementById('result');
-    if (items.includes('미스터리증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)')) {
-        resultElement.style.color = 'red';
-        resultElement.style.backgroundColor = 'aqua';
-    } else {
-        resultElement.style.color = 'black';
-        resultElement.style.backgroundColor = 'white';
+    if (slider.value === '1') {
+        const items = mysteryBox1();
+        const resultElement = document.getElementById('result');
+        if (items.includes('미스터리증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)')) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.color = 'black';
+            resultElement.style.backgroundColor = 'white';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if (slider.value === '2') {
+        resultElement.innerHTML = '개발중';
+    }else if (slider.value === '3') {
+        resultElement.innerHTML = '개발중';
     }
-    resultElement.innerText = `결과: ${items.join(', ')}`;
+
     
 });
 

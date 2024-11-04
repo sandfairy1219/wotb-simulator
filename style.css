@@ -66,10 +66,6 @@ img {
 
 
 
-#slid {
-    text-align: center;
-    font-size: 20px; 
-}
 
 
 #delete {
@@ -94,12 +90,21 @@ img {
     margin: 5px auto;
 }
 
-
+#slidercontainer{
+    border: 1px solid #000; 
+    padding: 10px;
+    margin: 10px auto;
+    width: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
 
 #slid{
-    margin-left: 40%;
-    display: inline;
+    
+    
+    text-align: center;
+    font-size: 20px;
 }
 
 #settings {
@@ -124,9 +129,10 @@ img {
     background-color: #fff; /* 일반 모드 배경색 */
     color: #000; /* 일반 모드 글자색 */
     border: 1px solid #000;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000; /* Ensure it appears above other elements */
+    border-radius: 5px;
 }
 
 
@@ -186,4 +192,18 @@ body.dark-mode #log-container {
     border: 1px solid #ffffff;
     padding: 10px;
     border-radius: 5px;
+}
+
+body.dark-mode #slidercontainer {
+    background-color: #333333;
+    border: 1px solid #ffffff;
+}
+
+body.dark-mode #log-container div {
+    border: 1px solid #444444;
+}
+
+body.dark-mode #back{
+    background-color: #ffffff;
+    color: #000;
 }

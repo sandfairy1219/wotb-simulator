@@ -248,6 +248,8 @@ box.addEventListener('change', function() {
         window.location.href = '/country.html';
     } else if (box.value == '9') {
         window.location.href = '/tank.html';
+    } else if (box.value == '10') {
+        window.location.href = '/alpha.html';
     }
 });
 

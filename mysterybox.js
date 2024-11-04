@@ -3,7 +3,7 @@ const times = document.getElementById('times');
 const mc = document.getElementById('mc');
 let mctimes = 0;
 let opentimes = 0;
-function mysteryBox() {
+function mysteryBox1() {
     const items = [];
     
     // 자유경험치 200증서 2개
@@ -12,12 +12,12 @@ function mysteryBox() {
     // 나머지 아이템을 결정
     const itemChoices = [
         { name: '미스터리증서', chance: 5 },
-        { name: '골드 100개', chance: 11.91 },
-        { name: '골드 200개', chance: 7.44 },
-        { name: '골드 500개', chance: 2.98 },
-        { name: '골드 1500개', chance: 1 },
-        { name: '골드 3000개', chance: 0.51 },
-        { name: '골드 5000개', chance: 0.15 },
+        { name: '골드 100개', chance: 11.93 },
+        { name: '골드 200개', chance: 4.97 },
+        { name: '골드 500개', chance: 1.99 },
+        { name: '골드 1500개', chance: 0.67 },
+        { name: '골드 3000개', chance: 0.34 },
+        { name: '골드 5000개', chance: 0.1 },
         { name: '골드 100000개', chance: 0.01 },
         { name: '자유경험치 2000개', chance: 17.88 },
         { name: '자유경험치 4000개', chance: 8.94 },
@@ -26,8 +26,8 @@ function mysteryBox() {
         { name: '자유경험치 30000개', chance: 0.61 },
         { name: '자유경험치 100000개', chance: 0.18 },
         { name: '자유경험치 500000개', chance: 0.04 },
-        { name: '크레딧 50000개', chance: 7.01 },
-        { name: '크레딧 75000개', chance: 3.5 },
+        { name: '크레딧 50000개', chance: 6.99 },
+        { name: '크레딧 75000개', chance: 3.49 },
         { name: '크레딧 100000개', chance: 2.31 },
         { name: '크레딧 200000개', chance: 1.40 },
         { name: '크레딧 500000개', chance: 0.70 },
@@ -35,11 +35,13 @@ function mysteryBox() {
         { name: '번개잡이 아바타(전설)', chance: 0.30 },
         
         { name: '번개잡이 아바타(영웅)', chance: 2.7 },
-        { name: '골드 부스터 1개', chance: 9.76 },
-        { name: '골드 부스터 2개', chance: 4.88 },
-        { name: '골드 부스터 3개', chance: 3.25 },
-        { name: '골드 부스터 5개', chance: 1.41 },
-        { name: '골드 부스터 10개', chance: 0.70 }
+        { name: '골드 부스터 1개', chance: 11.71 },
+        { name: '골드 부스터 2개', chance: 5.85 },
+        { name: '골드 부스터 3개', chance: 3.90 },
+        { name: '골드 부스터 5개', chance: 1.69 },
+        { name: '골드 부스터 10개', chance: 0.85 },
+        { name: '미스터리 위장', chance: 0.05 },
+        { name: 'Projekt Kpz.07P(E)', chance: 0.05 }
     ];
 
     // 모든 아이템의 누적 확률을 계산하여 랜덤 아이템 선택
@@ -94,13 +96,23 @@ function mysteryBox() {
 
 
 
-
+const slider = document.getElementById('slider');
+const slid = document.getElementById('slid');
+slider.addEventListener('input', function() {
+    if (slider.value === '1') {
+        slid.innerText = '미스터리 상자 1';
+    }else if (slider.value === '2') {
+        slid.innerText = '미스터리 상자 2';
+    }else if (slider.value === '3') {
+        slid.innerText = '미스터리 상자 3';
+    }
+});
 
 let open = document.getElementById('open')
 open.addEventListener('click', function() {
     const items = mysteryBox();
     const resultElement = document.getElementById('result');
-    if (items.includes('미스터리증서')) {
+    if (items.includes('미스터리증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)')) {
         resultElement.style.color = 'red';
         resultElement.style.backgroundColor = 'aqua';
     } else {

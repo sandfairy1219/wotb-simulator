@@ -250,6 +250,8 @@ box.addEventListener('change', function() {
         window.location.href = '/tank.html';
     } else if (box.value == '10') {
         window.location.href = '/alpha.html';
+    } else if (box.value == '11') {
+        window.location.href = '/event.html';
     }
 });
 

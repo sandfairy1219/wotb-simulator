@@ -252,6 +252,8 @@ box.addEventListener('change', function() {
         window.location.href = '/alpha.html';
     } else if (box.value == '11') {
         window.location.href = '/event.html';
+    } else if (box.value == '12') {
+        window.location.href = '/kaleidoscope.html';
     }
 });
 

@@ -11,7 +11,7 @@
 <body>
     <button id="settings">설정</button>
     <button id="back">돌아가기</button>
-    <h1>최상위 포식자 상자</h1>
+    <h1>만화경 상자</h1>
     <select id="box">
         <option value="1" id="blackbox">상자 종류 선택</option>
         <option value="2" id="blackbox">블랙 상자</option>
@@ -27,15 +27,21 @@
         <option value="12">만화경 상자</option>
 
     </select>
-    <br><br>
-    <img src="img/alpha.jpg" width="300px">
+    <br><div id="slidercontainer">
+        
+        <label for="slider" id="slid" data-lang="sliderLabel">만화경 상자 I</label>
+        <input type="range" id="slider" name="slider" min="1" max="4" value="1">
+    </div>
+
+    <br>
+    <img id="containerimg" src="img/kaleidoscope.JPG" width="300px">
     <button id="open">뽑기</button>
     <button id="log">로그</button>
     <div id="result">결과 : </div><br><br>
     <div id="times"></div>
     <span id="finalgold"></span>
     <span id="tanks"></span>
-    <span id="camos"></span>
+    <span id="finalboxes"></span>
     <br>
     <span id="mc"></span>
     
@@ -52,7 +58,7 @@
         <input type="checkbox" id="darkmode">
     </div>
 
-    <script src="alpha.js"></script>
+    <script src="kaleidoscope.html"></script>
     <script src="settings.js"></script>
 </body>
 </html>

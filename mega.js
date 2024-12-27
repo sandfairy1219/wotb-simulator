@@ -1,10 +1,15 @@
+const e = require("express");
+
 let times = document.getElementById('times');
 let howmuch = 0;
 const finalgold = document.getElementById('finalgold');
 let gold = 0;
 const container = document.getElementById('log-container');
 let tanks = [];
+let boxes = [];
 const finaltanks = document.getElementById('tanks');
+const finalboxes = document.getElementById('finalboxes');
+
 
 function updateFinalTanks() {
     finaltanks.innerText = '획득한 탱크: ' + tanks.join(', ');
@@ -14,6 +19,15 @@ function updateFinalTanks() {
 function addTank(tank) {
     tanks.push(tank);
     updateFinalTanks();
+}
+
+function addBox(box) {
+    boxes.push(box);
+    updateFinalBoxes();
+}
+
+function updateFinalBoxes() { 
+    finalboxes.innerText = '획득한 상자: ' + boxes.join(', ');
 }
 
 
@@ -266,27 +280,24 @@ function megabox(){
         items.push('반려로봇');
     }
     
-    const ctaChance = Math.random() * 100;
-    if(ctaChance < 6.35){
+    
+    const randombox = Math.random() * 100;
+    if(randombox < 6.35){
         items.push('모두 모아보세요 상자 1개');
-    }
-
-    const blackboxChance = Math.random() * 100;
-    if(blackboxChance < 6.35){
+        addBox('모두 모아보세요 상자 1개');
+    }else if(randombox < 6.35 + 6.35){
         items.push('블랙상자 1개');
-    }
-
-    const mysteryboxChance = Math.random() * 100;
-    if(mysteryboxChance < 6.35){
+        addBox('블랙상자 1개');
+    }else if(randombox < 6.35 + 6.35 + 6.35){
         items.push('미스터리 상자 1개');
-    }
-
-    const grandsurpriseChance = Math.random() * 100;
-    if(grandsurpriseChance < 0.95){
+        addBox('미스터리 상자 1개');
+    }else if(randombox < 6.35 + 6.35 + 6.35 + 0.95){
         items.push('대형 깜짝 상자 1개');
+        addBox('대형 깜짝 상자 1개');
     }
 
-        const randomgold = Math.random() * 100;
+
+    const randomgold = Math.random() * 100;
     if(randomgold < 39.68){
         items.push('골드 250개');
         gold += 250;
@@ -433,6 +444,8 @@ reset.addEventListener('click', function() {
     times.innerText = `상자를 깐 횟수: ${opentimes}`;
     finalgold.innerText = `총 골드량: ${gold}`;
     finaltanks.innerText = '획득한 탱크: ';
+    finalboxes.innerText = '획득한 상자: ';
     howmuch = 0;
     tanks = [];
+    boxes = [];
 });

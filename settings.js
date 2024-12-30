@@ -253,7 +253,7 @@ box.addEventListener('change', function() {
     } else if (box.value == '11') {
         window.location.href = '/event.html';
     } else if (box.value == '12') {
-        window.location.href = '/kaleidoscope.html';
+        window.location.href = '/extras.html';
     }
 });
 

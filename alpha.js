@@ -5,6 +5,8 @@ let tanks = [];
 let camos = [];
 const finaltanks = document.getElementById('tanks');
 const finalcamos = document.getElementById('camos');
+const slider = document.getElementById('slider');
+const slid = document.getElementById('slid');
 
 
 function updateFinalTanks() {
@@ -243,27 +245,78 @@ function alpha(){
 
 
 
+}
+
+function t9(){
+
+    const items = []
+
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+    const el = document.createElement('div');
+    el.textContent = items.join(', ');
+    container.appendChild(el);
+    
+   
+    if (autoslider && autoslider.checked) {
+        el.scrollIntoView({ behavior: 'smooth' });
+    }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+    
+    window.addEventListener('scroll', function() {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
 
 
 
-
-
-
+    return items;
 
 }
 
+
+slider.addEventListener('input', function() {
+    const containerimg = document.getElementById('containerimg');   
+    if(slider.value == 1){
+        slid.innerText = '최상위 포식자 상자';
+        containerimg.src = "img/alpha.jpg"
+    }
+    if(slider.value == 2){
+        slid.innerText = 'IX 단계 상자';
+        containerimg.src = "img/t9.jpg"
+    }
+});
+
 let open = document.getElementById('open')
 open.addEventListener('click', function() {
-    const items = alpha();
-    const resultElement = document.getElementById('result');
-    if (items.some(item => item.includes('(X)') || item.includes('위장'))) {
-        resultElement.style.color = 'red';
-        resultElement.style.backgroundColor = 'aqua';
-    } else {
-        resultElement.style.backgroundColor = 'white';
-        resultElement.style.color = 'black';
+    if(slider.value == 1){
+        
+        const items = alpha();
+        const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('위장'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 2){
+        alert('개발중');
     }
-    resultElement.innerText = `결과: ${items.join(', ')}`;
     
 });
 

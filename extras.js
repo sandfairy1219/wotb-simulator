@@ -912,6 +912,8 @@ function bigboss(){
         items.push('빅 보스 상자 임무')
     }
 
+    // 공통
+
     let autoslider = document.getElementById('autoslide');
 
     function addLogItem(items, container) {
@@ -947,7 +949,217 @@ function bigboss(){
 
 }
 
+function bad(){
+    const items = [];
 
+    items.push('골드 부적')
+
+    const randomtank = Math.floor(Math.random() * 100);
+
+    if(randomtank < 5){
+        const tanks = [
+            '(VII) Helsing',
+            '(VII) Dracula',
+            '(VII) Smasher',
+            '(VII) Annihilator',
+            '(VII) Tankenstein',
+            '(VII) Gravedigger',
+            '(VII) Lycan',
+            '(VII) Pharaoh',
+            '(V) Scavenger',
+            '(V) Nightmare',
+            '(V) Spike',
+            '(V) Medjay'
+        ]
+        const selectedTank = tanks[Math.floor(Math.random() * tanks.length)];
+        items.push(selectedTank);
+        console.log(selectedTank);
+        addTank(selectedTank);
+    }
+
+    const randompr = Math.floor(Math.random() * 100);
+    if(randompr < 10.31){
+        items.push('프리미엄 계정 7일')
+    }else if(randompr < 10.31 + 6.19){
+        items.push('프리미엄 계정 14일')
+    }else if(randompr < 10.31 + 6.19 + 2.58){
+        items.push('프리미엄 계정 30일')
+    }else if(randompr < 10.31 + 6.19 + 2.58 + 0.52){
+        items.push('프리미엄 계정 60일')
+    }else if(randompr < 10.31 + 6.19 + 2.58 + 0.52 + 0.41){
+        items.push('프리미엄 계정 90일')
+    }
+
+    const randomgold = Math.floor(Math.random() * 100);
+    if(randomgold < 10.01){
+        items.push('골드 100개')
+    }else if(randomgold < 10.01 + 5.01){    
+        items.push('골드 200개')
+    }else if(randomgold < 10.01 + 5.01 + 4.00){
+        items.push('골드 500개')
+    }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00){
+        items.push('골드 1500개')
+    }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50){
+        items.push('골드 3000개')
+    }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50 + 0.98){
+        items.push('골드 5000개')
+    }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50 + 0.98 + 0.50){
+        items.push('골드 10000개')
+    }
+
+    const randomprofilebackground = Math.floor(Math.random() * 100);
+    if(randomprofilebackground < 1){
+        items.push('헬싱 프로필 배경')
+    }else if(randomprofilebackground < 1 + 1){
+        items.push('드라큘라 프로필 배경')
+    }else if(randomprofilebackground < 1 + 1 + 1){
+        items.push('Pharaoh 프로필 배경')
+    }
+
+    const randomcamo = Math.floor(Math.random() * 100);
+    if(randomcamo < 0.92){
+        items.push('"격통의 창"')
+    }else if(randomcamo < 0.92 + 0.92){
+        items.push('"영혼 인도자"')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92){
+        items.push('"밤의 날개"')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15){
+        items.push('까마귀 위장')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15 + 1.15){
+        items.push('기사 위장')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15 + 1.15 + 1.15){
+        items.push('두 얼굴 위장')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15 + 1.15 + 1.15 + 1.15){
+        items.push('전능의 눈 위장')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15 + 1.15 + 1.15 + 1.15 + 2.31){
+        items.push('"헛수고 사격"')
+    }else if(randomcamo < 0.92 + 0.92 + 0.92 + 1.15 + 1.15 + 1.15 + 1.15 + 2.31 + 2.31){
+        items.push('"호박 초롱"')
+    }
+
+    const randomavatar = Math.floor(Math.random() * 100);
+    if(randomavatar < 0.67){
+        items.push('음산한 천재 아바타')
+    }else if(randomavatar < 0.67 *2){
+        items.push('캡틴 러프넥 아바타')
+    }else if(randomavatar < 0.67 *3 ){
+        items.push('Helsing 아바타')
+    }else if(randomavatar < 0.67 *4  ){
+        items.push('늑대인간 아바타')
+    }else if(randomavatar < 0.67  *5  ){
+        items.push('Pharaoh 아바타')
+    }else if(randomavatar < 0.67    *6 ){
+        items.push('Medjay 아바타')
+    }else if(randomavatar < 0.67    *7  ){
+        items.push('백작 아바타')
+    }else if(randomavatar < 0.67*8){
+        items.push('캡틴 로맨틱 아바타')
+    }else if(randomavatar < 0.67*9){
+        items.push('탱크 걸 아바타')
+    }else if(randomavatar < 0.67*10){
+        items.push('캡틴 뮤직 아바타')
+    }else if(randomavatar < 0.67*11){
+        items.push('캡틴 잭 아바타')
+    }else if(randomavatar < 0.67*12){
+        items.push('Nightmare 마녀 아바타')
+    }
+
+    const randomxp = Math.floor(Math.random() * 100);
+    if(randomxp < 21.21){
+        items.push('경험치 3배 1개')
+    }else if(randomxp < 21.21 + 15.15){
+        items.push('경험치 3배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09){
+        items.push('경험치 3배 3개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18){
+        items.push('경험치 4배 1개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12){
+        items.push('경험치 4배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06){
+        items.push('경험치 4배 3개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09){
+        items.push('경험치 5배 1개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06){
+        items.push('경험치 5배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03){
+        items.push('경험치 5배 3개')
+    }
+
+    const randombooster = Math.random() * 100;
+    if(randombooster < 12.50){
+        items.push('크레딧 부스터 15개 (일반)')
+    }else if(randombooster < 12.50 * 2){
+        items.push('승무원 경험치 부스터 15개 (일반)')
+    }else if(randombooster < 12.50 * 3){
+        items.push('경험치 부스터 15개 (일반)')
+    }else if(randombooster < 12.50 * 4){
+        items.push('자유 경험치 부스터 15개 (일반)')
+    }else if(randombooster < 12.50 * 4 + 8.33){
+        items.push('크레딧 부스터 15개 (희귀)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 2){
+        items.push('승무원 경험치 부스터 15개 (희귀)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 3){
+        items.push('경험치 부스터 15개 (희귀)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 4){
+        items.push('자유 경험치 부스터 15개 (희귀)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17){
+        items.push('크레딧 부스터 15개 (영웅)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 2){
+        items.push('승무원 경험치 부스터 15개 (영웅)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 3){
+        items.push('경험치 부스터 15개 (영웅)')
+    }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 4){
+        items.push('자유 경험치 부스터 15개 (영웅)')
+    }
+
+    const randomfxp = Math.floor(Math.random() * 100);
+    if(randomfxp < 60.61){
+        items.push('자유경험치 200증서 3개');
+    }else if(randomfxp < 60.61 + 30.30){
+        items.push('자유경험치 2300증서 2개');
+    }else if(randomfxp < 60.61 + 30.30 + 9.09){
+        items.push('자유경험치 28000증서 1개');
+    } 
+
+    
+
+    // 공통
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
+// 확률표 끝
 
 const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');
@@ -969,6 +1181,9 @@ slider.addEventListener('input', function () {
     } else if (slider.value == 5){
         slid.innerText = '빅 보스 상자'
         containerimg.src = "img/bigboss.jpg";
+    } else if (slider.value == 6){
+        slid.innerText = '나쁜 녀석들 상자'
+        containerimg.src = "img/bad.jpg";
     }
 });
 
@@ -1023,6 +1238,17 @@ open.addEventListener('click', function () {
         const items = bigboss();
         const resultElement = document.getElementById('result');
         if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if (slider.value == 6) {
+        const items = bad();
+        const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
             resultElement.style.color = 'red';
             resultElement.style.backgroundColor = 'aqua';
         } else {

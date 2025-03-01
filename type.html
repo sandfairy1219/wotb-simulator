@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트 상자</title>
+    <title>탱크 유형 상자</title>
     
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <button id="settings">설정</button>
     <button id="back">돌아가기</button>
-    <h1>이벤트 상자</h1>
+    <h1>탱크 유형 상자</h1>
     <select id="box">
         <option value="1" id="blackbox">상자 종류 선택</option>
         <option value="2" id="blackbox">블랙 상자</option>
@@ -25,26 +26,31 @@
         <option value="11">이벤트 상자</option>
         <option value="12">기타 상자</option>
         <option value="13">탱크 유형 상자</option>
-    </select>
-    <br>
-    <div id="slidercontainer">
 
-        <label for="slider" id="slid" data-lang="sliderLabel">사물함</label>
-        <input type="range" id="slider" name="slider" min="1" max="2" value="1">
+    </select>
+    <br><div id="slidercontainer">
+        
+        <label for="slider" id="slid" data-lang="sliderLabel">경전차 상자</label>
+        <input type="range" id="slider" name="slider" min="1" max="4" value="1">
     </div>
+
     <br>
-    <img id="containerimg" src="img/lockbox.jpg" width="300px">
+    <img id="containerimg" src="img/light.jpg" width="300px">
     <button id="open">뽑기</button>
     <button id="log">로그</button>
     <div id="result">결과 : </div><br><br>
-    <div id="times"></div><br>
-    <span id="finalboxes"></span>
+    <div id="times"></div>
     <span id="finalgold"></span>
     <span id="tanks"></span>
+    <span id="camos"></span>
+    <br>
+    <span id="mc"></span>
+    
     <div id="log-container"></div><br>
     <br>
     <button id="reset">초기화</button>
     <button id="delete">로그 비우기</button>
+
     <div id="settingsPage">
         <span>화면 자동 내림</span>
         <input type="checkbox" id="autoslide">
@@ -52,7 +58,8 @@
         <span>다크 모드</span>
         <input type="checkbox" id="darkmode">
     </div>
-    <script src="event.js"></script>
+
+    <script src="type.js"></script>
     <script src="settings.js"></script>
 </body>
 </html>

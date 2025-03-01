@@ -254,6 +254,8 @@ box.addEventListener('change', function() {
         window.location.href = '/event.html';
     } else if (box.value == '12') {
         window.location.href = '/extras.html';
+    } else if (box.value == '13'){
+        window.location.href = '/type.html';
     }
 });
 

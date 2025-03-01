@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>끝내줘요 상자</title>
+    <title>최상위 포식자 상자</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -25,10 +25,16 @@
         <option value="10">최상위 포식자 상자</option>
         <option value="11">이벤트 상자</option>
         <option value="12">기타 상자</option>
-
+        <option value="13">탱크 유형 상자</option>
     </select>
-    <br><br>
-    <img src="img/alpha.jpg" width="300px">
+    <br>
+    <div id="slidercontainer">
+        <label for="slider" id="slid" data-lang="sliderLabel">최상위 포식자 상자</label>
+        <input type="range" id="slider" name="slider" min="1" max="2" value="1">
+    </div>
+    
+    <br>
+    <img id="containerimg" src="img/alpha.jpg" width="300px">
     <button id="open">뽑기</button>
     <button id="log">로그</button>
     <div id="result">결과 : </div><br><br>

@@ -214,10 +214,22 @@ function alpha(){
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    
+    // 특별 아이템(탱크나 위장) 확인
+    const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('위장'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+    
     el.textContent = items.join(', ');
     container.appendChild(el);
     
-   
     if (autoslider && autoslider.checked) {
         el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -256,10 +268,22 @@ function t9(){
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    
+    // 특별 아이템(탱크나 위장) 확인
+    const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('위장'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+    
     el.textContent = items.join(', ');
     container.appendChild(el);
     
-   
     if (autoslider && autoslider.checked) {
         el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -325,8 +349,8 @@ reset.addEventListener('click', function() {
     opentimes = 0;
     gold = 0;
     times.innerText = `상자를 깐 횟수: ${opentimes}`;
-    finalgold.innerText = `총 골드량: ${gold}`;
     finaltanks.innerText = '획득한 탱크: ';
+    finalcamos.innerText = '획득한 위장: ';
     howmuch = 0;
     tanks = [];
 

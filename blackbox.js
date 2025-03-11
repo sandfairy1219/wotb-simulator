@@ -54,6 +54,18 @@ function blackboxlv1() {
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+
+    // 특별 아이템(탱크나 위장) 확인
+    const hasSpecialItem = items.some(item => item.includes('블랙상자 3') || item.includes('블랙상자 2'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
     el.textContent = items.join(', ');
     container.appendChild(el);
     

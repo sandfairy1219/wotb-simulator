@@ -4,61 +4,381 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>최상위 포식자 상자</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        :root {
+            --primary-color: #3a7bd5;
+            --secondary-color: #00d2ff;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --primary-color: #4e84db;
+            --secondary-color: #00d2ff;
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn-icon {
+            font-size: 0.9em;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: 1px solid #ccc;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .simulator-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .box-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        #containerimg {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        #containerimg:hover {
+            transform: scale(1.02);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #slidercontainer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #slider {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #ddd;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        #slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+
+        #result {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        #log-container {
+            max-height: 300px;
+            overflow-y: auto;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        #log-container div {
+            padding: 8px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        #log-container div:last-child {
+            border-bottom: none;
+        }
+
+        #settingsPage {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: var(--card-bg);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            z-index: 100;
+            min-width: 200px;
+            display: none;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider-switch {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider-switch:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider-switch {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .slider-switch:before {
+            transform: translateX(26px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <button id="settings">설정</button>
-    <button id="back">돌아가기</button>
-    <h1>최상위 포식자 상자</h1>
-    <select id="box">
-        <option value="1" id="blackbox">상자 종류 선택</option>
-        <option value="2" id="blackbox">블랙 상자</option>
-        <option value="3" id="mysterybox">미스터리 상자</option>
-        <option value="4" id="cta">모두 모아보세요 상자</option>
-        <option value="5" id="mega">메가 상자</option>
-        <option value="6">끝내줘요 상자</option>
-        <option value="7">대규모 상자</option>
-        <option value="8">국가 상자</option>
-        <option value="9">탱크 상자</option>
-        <option value="10">최상위 포식자 상자</option>
-        <option value="11">이벤트 상자</option>
-        <option value="12">기타 상자</option>
-        <option value="13">탱크 유형 상자</option>
-    </select>
-    <br>
-    <div id="slidercontainer">
-        <label for="slider" id="slid" data-lang="sliderLabel">최상위 포식자 상자</label>
-        <input type="range" id="slider" name="slider" min="1" max="2" value="1">
+    <div class="container">
+        <div class="header">
+            <button id="back" class="btn"><i class="fas fa-arrow-left btn-icon"></i> 돌아가기</button>
+            <button id="settings" class="btn"><i class="fas fa-cog btn-icon"></i> 설정</button>
+        </div>
+        
+        <h1>최상위 포식자 상자</h1>
+        
+        <div class="simulator-card">
+            <select id="box">
+                <option value="1" id="blackbox">상자 종류 선택</option>
+                <option value="2" id="blackbox">블랙 상자</option>
+                <option value="3" id="mysterybox">미스터리 상자</option>
+                <option value="4" id="cta">모두 모아보세요 상자</option>
+                <option value="5" id="mega">메가 상자</option>
+                <option value="6">끝내줘요 상자</option>
+                <option value="7">대규모 상자</option>
+                <option value="8">국가 상자</option>
+                <option value="9">탱크 상자</option>
+                <option value="10">최상위 포식자 상자</option>
+                <option value="11">이벤트 상자</option>
+                <option value="12">기타 상자</option>
+                <option value="13">탱크 유형 상자</option>
+            </select>
+            
+            <div id="slidercontainer">
+                <label for="slider" id="slid" data-lang="sliderLabel">최상위 포식자 상자</label>
+                <input type="range" id="slider" name="slider" min="1" max="2" value="1">
+            </div>
+            
+            <div class="box-image">
+                <img id="containerimg" src="img/alpha.jpg" alt="상자 이미지">
+            </div>
+            
+            <div class="controls">
+                <button id="open" class="btn"><i class="fas fa-gift btn-icon"></i> 뽑기</button>
+                <button id="log" class="btn"><i class="fas fa-list btn-icon"></i> 로그</button>
+            </div>
+            
+            <div id="result">결과 : </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-box" id="times">상자를 깐 횟수 :</div>
+            <div class="stat-box" id="tanks">획득한 탱크 :</div>
+            <div class="stat-box" id="camos">획득한 위장 :</div>
+        </div>
+        
+        <div id="log-container"></div>
+        
+        <div class="controls">
+            <button id="reset" class="btn"><i class="fas fa-redo btn-icon"></i> 초기화</button>
+            <button id="delete" class="btn"><i class="fas fa-trash btn-icon"></i> 로그 비우기</button>
+        </div>
     </div>
-    
-    <br>
-    <img id="containerimg" src="img/alpha.jpg" width="300px">
-    <button id="open">뽑기</button>
-    <button id="log">로그</button>
-    <div id="result">결과 : </div><br><br>
-    <div id="times"></div>
-    <span id="finalgold"></span>
-    <span id="tanks"></span>
-    <span id="camos"></span>
-    <br>
-    <span id="mc"></span>
-    
-    <div id="log-container"></div><br>
-    <br>
-    <button id="reset">초기화</button>
-    <button id="delete">로그 비우기</button>
 
     <div id="settingsPage">
-        <span>화면 자동 내림</span>
-        <input type="checkbox" id="autoslide">
-        <br>
-        <span>다크 모드</span>
-        <input type="checkbox" id="darkmode">
+        <div class="setting-item">
+            <span>화면 자동 내림</span>
+            <label class="switch">
+                <input type="checkbox" id="autoslide">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <span>다크 모드</span>
+            <label class="switch">
+                <input type="checkbox" id="darkmode">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
     </div>
 
     <script src="alpha.js"></script>
     <script src="settings.js"></script>
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkmode');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+                localStorage.setItem('darkMode', darkModeToggle.checked);
+            });
+            
+            // Check for saved dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                darkModeToggle.checked = true;
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
 </body>
 </html>

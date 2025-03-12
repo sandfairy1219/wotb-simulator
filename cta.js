@@ -1,12 +1,6 @@
 const container = document.getElementById('log-container');
 let howmuch = 0
 let times = document.getElementById('times');
-let goldreturn = document.getElementById('goldreturn');
-let gold = 0
-let usedgold = 0
-let usegold = document.getElementById('usegold');
-let goldAmuletCount = 0;
-const finalgold = document.getElementById('finalgold');
 
 let tanks = [];
 
@@ -190,7 +184,6 @@ function cta() {
     } else {
         // 골드부적 추가
         items.push('골드부적');
-        goldAmuletCount++;
         // 자유경험치 증서 결정
         const randomCertificate = Math.random() * 100;
         let certificate;
@@ -257,6 +250,16 @@ function cta() {
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
     el.textContent = items.join(', ');
     container.appendChild(el);
     
@@ -281,15 +284,8 @@ function cta() {
     });
     
     howmuch += 1
-    usedgold += 500
-    usegold.textContent = `사용한 골드량 : ${usedgold}`;
     times.innerText = `상자를 깐 횟수: ${howmuch}회`;
-    finalgold.textContent = `총 사용 골드량 : ${usedgold - gold}`;
-    if (goldAmuletCount >= 7) {
-        gold += 1000;
-        goldAmuletCount = 0; // 골드부적 카운트 초기화
-        goldreturn.textContent = `리턴 골드량 : ${gold}`;
-    }
+    
     return items;
     
 }
@@ -325,10 +321,7 @@ reset.addEventListener('click', function() {
     howmuch = 0
     usedgold = 0
     gold = 0
-    goldreturn.textContent = `리턴 골드량 : ${gold}`;
-    usegold.textContent = `사용한 골드량 : ${usedgold}`;
     times.innerText = `상자를 깐 횟수: ${howmuch}회`;
-    finalgold.textContent = `총 사용 골드량 : ${usedgold - gold}`;
     tanks = [];
     updateFinalTanks()
     ;

@@ -87,6 +87,16 @@ function mysteryBox1() {
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    const hasSpecialItem = items.some(item => items.includes('미스터리 증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
     el.textContent = items.join(', ');
     container.appendChild(el);
     
@@ -207,6 +217,16 @@ function mysteryBox2() {
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    const hasSpecialItem = items.some(item => items.includes('미스터리 증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
     el.textContent = items.join(', ');
     container.appendChild(el);
     
@@ -325,6 +345,16 @@ function mysteryBox3() {
 
     function addLogItem(items, container) {
     const el = document.createElement('div');
+    const hasSpecialItem = items.some(item => items.includes('미스터리 증서') || items.includes('미스터리 위장') || items.includes('Projekt Kpz.07P(E)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
     el.textContent = items.join(', ');
     container.appendChild(el);
     

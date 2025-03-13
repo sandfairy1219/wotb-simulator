@@ -4,52 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대규모 상자</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <button id="settings">설정</button>
-    <button id="back">돌아가기</button>
-    <h1>대규모 상자</h1>
-    <select id="box">
-        <option value="1" id="blackbox">상자 종류 선택</option>
-        <option value="2" id="blackbox">블랙 상자</option>
-        <option value="3" id="mysterybox">미스터리 상자</option>
-        <option value="4" id="cta">모두 모아보세요 상자</option>
-        <option value="5" id="mega">메가 상자</option>
-        <option value="6">끝내줘요 상자</option>
-        <option value="7">대규모 상자</option>
-        <option value="8">국가 상자</option>
-        <option value="9">탱크 상자</option>
-        <option value="10">최상위 포식자 상자</option>
-        <option value="11">이벤트 상자</option>
-        <option value="12">기타 상자</option>
-        <option value="13">탱크 유형 상자</option>
-    </select>
-    <br><br>
-    <img src="img/massive.jpg" width="300px">
-    <button id="open">뽑기</button>
-    <button id="log">로그</button>
-    <div id="result">결과 : </div><br><br>
-    <div id="times"></div>
-    <span id="tanks"></span>
-    <span id="finalboxes"></span>
-    <span id="usedgold"></span>
-    <br>
-    <span id="mc"></span>
-    
-    <div id="log-container"></div><br>
-    <br>
-    <button id="reset">초기화</button>
-    <button id="delete">로그 비우기</button>
+    <div class="container">
+        <div class="header">
+
+            <button id="back" class="btn"><i class="fas fa-arrow-left btn-icon"></i> 돌아가기</button>
+            <button id="settings" class="btn"><i class="fas fa-cog btn-icon"></i> 설정</button>
+        </div>
+        <h1>대규모 상자</h1>
+        <div class="simulator-card">
+
+            <select id="box">
+                <option value="1" id="blackbox">상자 종류 선택</option>
+                <option value="2" id="blackbox">블랙 상자</option>
+                <option value="3" id="mysterybox">미스터리 상자</option>
+                <option value="4" id="cta">모두 모아보세요 상자</option>
+                <option value="5" id="mega">메가 상자</option>
+                <option value="6">끝내줘요 상자</option>
+                <option value="7">대규모 상자</option>
+                <option value="8">국가 상자</option>
+                <option value="9">탱크 상자</option>
+                <option value="10">최상위 포식자 상자</option>
+                <option value="11">이벤트 상자</option>
+                <option value="12">기타 상자</option>
+                <option value="13">탱크 유형 상자</option>
+            </select>
+            <div class="box-image">
+
+                <img src="img/massive.jpg" width="300px">
+            </div>
+            <div  class="controls">
+
+                <button id="open" class="btn"><i class="fas fa-gift btn-icon"></i> 뽑기</button>
+                <button id="log" class="btn"><i class="fas fa-list btn-icon"></i> 로그</button>
+            </div>
+            <div id="result">결과 : </div>
+        </div>
+        <div class="stats">
+
+            <div id="times" class="stat-box">상자를 깐 횟수 : 0회</div>
+            <div id="tanks" class="stat-box">획득한 탱크 : </div>
+            <div id="finalboxes" class="stat-box">획득한 상자 : </div>
+            <div id="usedgold"  class="stat-box">사용한 골드 : </div>
+        </div>
+        
+        
+        <div id="log-container"></div>
+        <div class="controls">
+            
+            <button class="btn" id="reset"><i class="fas fa-redo btn-icon"></i> 초기화</button>
+            <button class="btn" id="delete"><i class="fas fa-trash btn-icon"></i> 로그 비우기</button>
+        </div>
+    </div>
 
     <div id="settingsPage">
-        <span>화면 자동 내림</span>
-        <input type="checkbox" id="autoslide">
-        <br>
-        <span>다크 모드</span>
-        <input type="checkbox" id="darkmode">
+        <div class="setting-item">
+            <span>화면 자동 내림</span>
+            <label class="switch">
+                <input type="checkbox" id="autoslide">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <span>다크 모드</span>
+            <label class="switch">
+                <input type="checkbox" id="darkmode">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
     </div>
 
     <script src="massive.js"></script>

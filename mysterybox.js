@@ -123,9 +123,9 @@ function mysteryBox1() {
     times.innerText = `상자를 깐 횟수: ${opentimes}`;
     finalgold.innerText = `획득한 골드: ${gold}`;
 
-    if (items.includes('미스터리증서')) {
+    if (items.includes('미스터리 증서')) {
         mctimes++;
-        mc.innerText = `미스터리증서 획득 횟수: ${mctimes}`;
+        mc.innerText = `미스터리 증서 획득 횟수: ${mctimes}`;
     }
 
     return items;
@@ -253,9 +253,9 @@ function mysteryBox2() {
     times.innerText = `상자를 깐 횟수: ${opentimes}`;
     finalgold.innerText = `획득한 골드: ${gold}`;
 
-    if (items.includes('미스터리증서')) {
+    if (items.includes('미스터리 증서')) {
         mctimes++;
-        mc.innerText = `미스터리증서 획득 횟수: ${mctimes}`;
+        mc.innerText = `미스터리 증서 획득 횟수: ${mctimes}`;
     }
 
     return items;

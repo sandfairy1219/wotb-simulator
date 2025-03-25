@@ -323,78 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 설정 버튼 이벤트
-    const settingsBtn = document.getElementById('settings');
-    const settingsPage = document.getElementById('settingsPage');
-    if (settingsBtn && settingsPage) {
-        settingsBtn.addEventListener('click', function() {
-            settingsPage.style.display = settingsPage.style.display === 'block' ? 'none' : 'block';
-        });
-        
-        // 설정 외부 클릭 이벤트
-        document.addEventListener('click', function(e) {
-            if (settingsBtn && settingsPage && !settingsBtn.contains(e.target) && !settingsPage.contains(e.target)) {
-                settingsPage.style.display = 'none';
-            }
-        });
-    }
     
-    // 로그 토글 버튼 이벤트
-    const log = document.getElementById('log');
-    const deleteButton = document.getElementById('delete');
-    if (log && container) {
-        log.addEventListener('click', function() {
-            if (container.style.display === 'none' || container.style.display === '') {
-                container.style.display = 'block';
-                if (deleteButton) deleteButton.style.display = 'block';
-            } else {
-                container.style.display = 'none';
-                if (deleteButton) deleteButton.style.display = 'none';
-            }
-        });
-    }
-    
-    // 로그 삭제 버튼 이벤트
-    if (deleteButton && container) {
-        deleteButton.addEventListener('click', function() {
-            container.innerHTML = '';
-        });
-    }
-    
-    // 뒤로가기 버튼 이벤트
-    const back = document.getElementById('back');
-    if (back) {
-        back.addEventListener('click', function() {
-            window.location.href = '/';
-        });
-    }
-    
-    // 박스 선택 이벤트
-    const box = document.getElementById('box');
-    if (box) {
-        box.addEventListener('change', function() {
-            const boxValue = box.value;
-            const boxRedirects = {
-                '1': '/index.html',
-                '2': '/blackbox.html',
-                '3': '/mysterybox.html',
-                '4': '/cta.html',
-                '5': '/mega.html',
-                '6': '/awc.html',
-                '7': '/massive.html',
-                '8': '/country.html',
-                '9': '/tank.html',
-                '10': '/alpha.html',
-                '11': '/event.html',
-                '12': '/extras.html',
-                '13': '/nation.html'
-            };
-            
-            if (boxRedirects[boxValue]) {
-                window.location.href = boxRedirects[boxValue];
-            }
-        });
-    }
     
     // 초기값 설정
     if (times) times.innerText = `상자를 깐 횟수: 0회`;

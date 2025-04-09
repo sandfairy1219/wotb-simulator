@@ -1219,6 +1219,240 @@ function bad(){
     return items;
 }
 
+function gravity(){
+    const items = [];
+
+    items.push('중력 이상 상자 부적')
+
+    const randomtank = Math.floor(Math.random() * 100);
+    if (randomtank < 0.05){
+        items.push('(X) Carro 45 t')
+        addTank('(X) Carro 45 t');
+        console.log('(X) Carro 45 t');
+    }else if(randomtank < 0.05 * 2){
+        items.push('(X) Kpz 50 t')
+        addTank('(X) Kpz 50 t');
+        console.log('(X) Kpz 50 t');
+    }else if(randomtank < 0.05 * 3){
+        items.push('(X) VK 90,01 (P)')
+        addTank('(X) VK 90,01 (P)');
+        console.log('(X) VK 90,01 (P)');  
+    }else if(randomtank < 0.05 * 4){
+        items.push('(X) XM66F')
+        addTank('(X) XM66F');
+        console.log('(X) XM66F');   
+    }else if(randomtank < 0.05 * 5){
+        items.push('(X) T-22 Medium)')
+        addTank('(X) T-22 Medium)');
+        console.log('(X) T-22 Medium)');  
+    }else if(randomtank < 0.05 * 6){
+        items.push('(X) Object 268/4')
+        addTank('(X) Object 268/4');
+        console.log('(X) Object 268/4');
+    }else if(randomtank < 0.05 * 6 + 0.1){
+        items.push('(IX) Lorraine 50 t')
+        addTank('(IX) Lorraine 50 t');
+        console.log('(IX) Lorraine 50 t');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2){
+        items.push('(IX) Erich Konzept I')
+        addTank('(IX) Erich Konzept I');
+        console.log('(IX) Erich Konzept I');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15){
+        items.push('(VIII) WZ-120-1 FT')
+        addTank('(VIII) WZ-120-1 FT');
+        console.log('(VIII) WZ-120-1 FT');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *2){
+        items.push('(VIII) Skoda T 27')
+        addTank('(VIII) Skoda T 27');
+        console.log('(VIII) Skoda T 27');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *3){
+        items.push('(VIII) Skoda T 56')   
+        addTank('(VIII) Skoda T 56');
+        console.log('(VIII) Skoda T 56');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *4){
+        items.push('(VIII) Progetto 46')
+        addTank('(VIII) Progetto 46');
+        console.log('(VIII) Progetto 46');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *5){
+        items.push('(VIII) Defender Mk. 1')
+        addTank('(VIII) Defender Mk. 1');
+        console.log('(VIII) Defender Mk. 1');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *6){
+        items.push('(VIII) T28 Defender')
+        addTank('(VIII) T28 Defender');
+        console.log('(VIII) T28 Defender');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *7){
+        items.push('(VIII) KV-5')
+        addTank('(VIII) KV-5');
+        console.log('(VIII) KV-5');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *8){
+        items.push('(VIII) LT-432')
+        addTank('(VIII) LT-432');
+        console.log('(VIII) LT-432');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *9){
+        items.push('(VIII) Skorpion G')
+        addTank('(VIII) Skorpion G');
+        console.log('(VIII) Skorpion G');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *10){
+        items.push('(VIII) VK 168.01 (P)')
+        addTank('(VIII) VK 168.01 (P)');
+        console.log('(VIII) VK 168.01 (P)');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *11){
+        items.push('(VIII) Chimera')
+        addTank('(VIII) Chimera');
+        console.log('(VIII) Chimera');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *12){
+        items.push('(VIII) SU-130PM')
+        addTank('(VIII) SU-130PM');
+        console.log('(VIII) SU-130PM');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *12 + 0.19){
+        items.push('(VII) Smasher')
+        addTank('(VII) Smasher');
+        console.log('(VII) Smasher');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *12 + 0.19 *2){
+        items.push('(VII) T28 HTC')
+        addTank('(VII) T28 HTC');
+        console.log('(VII) T28 HTC');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *12 + 0.19 *3){
+        items.push('(VI) TOG II*')
+        addTank('(VI) TOG II*');
+        console.log('(VI) TOG II*');
+    }else if(randomtank < 0.05 * 6 + 0.1 *2 + 0.15 *12 + 0.19 *4){
+        items.push('(VI) Pawlack Tank')
+        addTank('(VI) Pawlack Tank');
+        console.log('(VI) Pawlack Tank');
+    }
+
+    const randomcredit = Math.floor(Math.random() * 100);
+    if(randomcredit < 6.87){
+        items.push('크레딧 15000개')
+    }else if(randomcredit < 6.87 + 6.01){
+        items.push('크레딧 20000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15){
+        items.push('크레딧 25000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44){
+        items.push('크레딧 50000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44 + 1.12){
+        items.push('크레딧 75000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44 + 1.12 + 0.95){
+        items.push('크레딧 100000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44 + 1.12 + 0.95 + 0.69){
+        items.push('크레딧 250000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44 + 1.12 + 0.95 + 0.69 + 0.52){
+        items.push('크레딧 400000개')
+    }else if(randomcredit < 6.87 + 6.01 + 5.15 + 3.44 + 1.12 + 0.95 + 0.69 + 0.52 + 0.26){
+        items.push('크레딧 500000개')
+    }
+
+    const randomxp = Math.floor(Math.random() * 100);
+    if(randomxp < 21.21){
+        items.push('경험치 3배 1개')
+    }else if(randomxp < 21.21 + 15.15){
+        items.push('경험치 3배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09){
+        items.push('경험치 3배 3개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18){
+        items.push('경험치 4배 1개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12){
+        items.push('경험치 4배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06){
+        items.push('경험치 4배 3개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09){
+        items.push('경험치 5배 1개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06){
+        items.push('경험치 5배 2개')
+    }else if(randomxp < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03){
+        items.push('경험치 5배 3개')
+    }
+
+    const randombooster = Math.random() * 100;
+    if(randombooster < 2.78){
+        items.push('크레딧 부스터 3개 (영웅)')
+    }else if(randombooster < 2.78 * 2){
+        items.push('승무원 경험치 부스터 3개 (영웅)')
+    }else if(randombooster < 2.78 * 3){
+        items.push('경험치 부스터 3개 (영웅)')
+    }else if(randombooster < 2.78 * 4){
+        items.push('자유 경험치 부스터 3개 (영웅)')
+    }else if(randombooster < 2.78 * 4 + 8.33){
+        items.push('크레딧 부스터 5개 (희귀)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 2){
+        items.push('승무원 경험치 부스터 5개 (희귀)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 3){
+        items.push('경험치 부스터 5개 (희귀)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 4){
+        items.push('자유 경험치 부스터 5개 (희귀)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 4 + 13.89){
+        items.push('크레딧 부스터 7개 (일반)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 4 + 13.89 * 2){
+        items.push('승무원 경험치 부스터 7개 (일반)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 4 + 13.89 * 3){
+        items.push('경험치 부스터 7개 (일반)')
+    }else if(randombooster < 2.78 * 4 + 8.33 * 4 + 13.89 * 4){
+        items.push('자유 경험치 부스터 7개 (일반)')
+    }
+
+    const randomgoldbooster = Math.random() * 100;
+    if(randomgoldbooster < 17,61){
+        items.push('골드 부스터 3개 ')
+    }else if(randomgoldbooster < 17.61 + 5.28){
+        items.push('골드 부스터 5개')
+    }else if(randomgoldbooster < 17.61 + 5.28 + 1.76){
+        items.push('골드 부스터 7개')
+    }else if(randomgoldbooster < 17.61 + 5.28 + 1.76 + 0.35){
+        items.push('골드 부스터 10개')
+    }
+
+    const randomoffer = Math.floor(Math.random() * 100);
+    if(randomoffer < 1){
+        items.push('명령')
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+
+}
+
 // 확률표 끝
 
 const slider = document.getElementById('slider');
@@ -1244,6 +1478,9 @@ slider.addEventListener('input', function () {
     } else if (slider.value == 6){
         slid.innerText = '나쁜 녀석들 상자'
         containerimg.src = "img/bad.jpg";
+    } else if (slider.value == 7){
+        slid.innerText = '중력 이상 상자'
+        containerimg.src = "img/gravity.jpg";
     }
 });
 
@@ -1307,6 +1544,17 @@ open.addEventListener('click', function () {
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }else if (slider.value == 6) {
         const items = bad();
+        const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 7){
+        const items = gravity();
         const resultElement = document.getElementById('result');
         if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
             resultElement.style.color = 'red';

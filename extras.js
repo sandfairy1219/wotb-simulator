@@ -1453,6 +1453,301 @@ function gravity(){
 
 }
 
+function season(){
+
+    const items = [];
+    items.push('시즌 전차 부적')
+
+    const randomtoken = Math.floor(Math.random() * 100);
+    if(randomtoken < 20.45){
+        items.push('첩보 250개')
+    }else if(randomtoken < 20.45 + 7.16){
+        items.push('첩보 450개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07){
+        items.push('첩보 750개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43){
+        items.push('첩보 1000개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02){
+        items.push('첩보 1500개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2){
+        items.push('첩보 2500개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+ 20.45){
+        items.push('포티움 조각 250개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16){
+        items.push('포티움 조각 450개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07){   
+        items.push('포티움 조각 750개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43){
+        items.push('포티움 조각 1000개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02){
+        items.push('포티움 조각 1500개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2){
+        items.push('포티움 조각 2500개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45){  
+        items.push('키트 코인 250개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16){
+        items.push('키트 코인 450개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07){
+        items.push('키트 코인 750개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43){
+        items.push('키트 코인 1000개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02){
+        items.push('키트 코인 1500개')
+    }else if(randomtoken < 20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2+20.45 + 7.16 + 3.07 + 1.43 + 1.02 + 0.2){
+        items.push('키트 코인 2500개')
+    }
+
+    const randomtank = Math.floor(Math.random() * 100);
+    if (randomtank < 0.33){
+        items.push('(IX) Regressor')
+        addTank('(IX) Regressor');
+        console.log('(IX) Regressor');
+    }else if(randomtank < 0.33 * 2){
+        items.push('(IX) Glacier')
+        addTank('(IX) Glacier');
+        console.log('(IX) Glacier');
+    }else if(randomtank < 0.33 * 3){    
+        items.push('(IX) Fanrik')
+        addTank('(IX) Fanrik');
+        console.log('(IX) Fanrik');
+    }else if(randomtank < 0.33 * 4){
+        items.push('(VIII) Fixer')
+        addTank('(VIII) Fixer');
+        console.log('(VIII) Fixer');
+    }else if(randomtank < 0.33 * 5){    
+        items.push('(VIII) Nebulon')
+        addTank('(VIII) Nebulon');
+        console.log('(VIII) Nebulon');
+    }else if(randomtank < 0.33 * 6){
+        items.push('(VIII) Swindler')
+        addTank('(VIII) Swindler');
+        console.log('(VIII) Swindler');
+    }else if(randomtank < 0.33 * 7){
+        items.push('(VII) Magnate')
+        addTank('(VII) Magnate');
+        console.log('(VII) Magnate');
+    }else if(randomtank < 0.33 * 8){
+        items.push('(VII) Basilisk')
+        addTank('(VII) Basilisk');
+        console.log('(VII) Basilisk');
+    }else if(randomtank < 0.33 * 9){
+        items.push('(VII) Silencer')
+        addTank('(VII) Silencer');
+        console.log('(VII) Silencer');
+    }
+        
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
+function wasteland(){
+    const items = [];
+    items.push('황무지 전차 부적')
+
+    
+
+    const randomtank = Math.floor(Math.random() * 100);
+    if (randomtank < 0.75){
+        items.push('(VII) Smasher')
+        addTank('(VII) Smasher');
+        console.log('(VII) Smasher');
+    }else if(randomtank < 0.75 * 2){
+        items.push('(VII) Annihilator')
+        addTank('(VII) Annihilator');
+        console.log('(VII) Annihilator');
+    }else if(randomtank < 0.75 * 3){    
+        items.push('(VII) Rammer')
+        addTank('(VII) Rammer');
+    }else if(randomtank < 0.75 * 4){
+        items.push('(V) Spike')
+        addTank('(V) Spike');
+        console.log('(V) Spike ');
+    }
+
+    const randomcamo = Math.floor(Math.random() * 100);
+    if(randomcamo < 0.5){
+        items.push('콜로서스 위장')
+    }else if(randomcamo < 0.5 + 0.5){   
+        items.push('눈꼴무늬 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5){
+        items.push('Burn 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('지옥 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('스피드파이어 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('"전쟁의 불길" 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('"광기의 화염" 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('"멜트다운" 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('"가을 낙엽" 위장')
+    }else if(randomcamo < 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5){
+        items.push('"스크랩 골렘" 위장')
+    }
+
+    const randomItem = Math.floor(Math.random() * 100);
+    if(randomItem < 1.5){
+        items.push('"격통의 창"')
+    }else if(randomItem < 1.5 + 1.5){
+        items.push('"헛수고 사격"')
+    }
+
+    const randomxmbooster = Math.random() * 100;
+    if(randomxmbooster < 11.76){
+        items.push('경험치 4배 1개')
+    }else if(randomxmbooster < 11.76 + 7.84){
+        items.push('경험치 4배 2개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92){
+        items.push('경험치 4배 3개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88){
+        items.push('경험치 5배 1개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88 + 3.92){
+        items.push('경험치 5배 2개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88 + 3.92 + 1.96){
+        items.push('경험치 5배 3개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88 + 3.92 + 1.96 + 49.02){
+        items.push('경험치 3배 1개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88 + 3.92 + 1.96 + 49.02 + 9.8){
+        items.push('경험치 3배 2개')
+    }else if(randomxmbooster < 11.76 + 7.84 + 3.92 + 5.88 + 3.92 + 1.96 + 49.02 + 9.8 + 5.88){
+        items.push('경험치 3배 3개')
+    }
+
+    const randomgoldbooster = Math.random() * 100;
+    if(randomgoldbooster < 35.21){
+        items.push('골드 부스터 3개 ')
+    }else if(randomgoldbooster < 35.21 + 10.56){
+        items.push('골드 부스터 5개')   
+    }else if(randomgoldbooster < 35.21 + 10.56 + 3.52){
+        items.push('골드 부스터 7개')
+    }else if(randomgoldbooster < 35.21 + 10.56 + 3.52 + 0.7){
+        items.push('골드 부스터 10개')
+    }
+
+    const randomfxpcertificate = Math.random() * 100;
+    if(randomfxpcertificate < 0.9){
+        items.push('자유경험치 28000 증서 1개')
+    }else if(randomfxpcertificate < 0.9 + 9.01){
+        items.push('자유경험치 2300 증서 1개')
+    }else if(randomfxpcertificate < 0.9 + 9.01 + 90.09){
+        items.push('자유경험치 200 증서 1개')
+    }
+
+    const randomxpbooster = Math.random() * 100;
+    if(randomxpbooster < 33.33){
+        items.push('경험치 부스터 5개 (영웅)')
+    }else if(randomxpbooster < 33.33 *2){
+        items.push('경험치 부스터 5개 (희귀)')
+    } else if(randomxpbooster < 33.33 *3){
+        items.push('경험치 부스터 5개 (일반)')
+    }
+    
+    const randomcreditbooster = Math.random() * 100;    
+    if(randomcreditbooster < 33.33){
+        items.push('크레딧 부스터 5개 (영웅)')
+    }else if(randomcreditbooster < 33.33 *2){
+        items.push('크레딧 부스터 5개 (희귀)')
+    }else if(randomcreditbooster < 33.33 *3){   
+        items.push('크레딧 부스터 5개 (일반)')
+    }
+
+    const randomfxpbooster = Math.random() * 100;
+    if(randomfxpbooster < 33.33){
+        items.push('자유 경험치 부스터 5개 (영웅)')
+    }else if(randomfxpbooster < 33.33 *2){  
+        items.push('자유 경험치 부스터 5개 (희귀)')
+    }else if(randomfxpbooster < 33.33 *3){
+        items.push('자유 경험치 부스터 5개 (일반)')
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+
+
+}
+
 // 확률표 끝
 
 const slider = document.getElementById('slider');
@@ -1481,6 +1776,12 @@ slider.addEventListener('input', function () {
     } else if (slider.value == 7){
         slid.innerText = '중력 이상 상자'
         containerimg.src = "img/gravity.jpg";
+    } else if (slider.value == 8){
+        slid.innerText = '시즌 전차 상자'
+        containerimg.src = "img/season.jpg";
+    } else if (slider.value == 9){
+        slid.innerText = '황무지 전차 상자'
+        containerimg.src = "img/wastelands.jpg";
     }
 });
 
@@ -1556,6 +1857,28 @@ open.addEventListener('click', function () {
     }else if(slider.value == 7){
         const items = gravity();
         const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 8){
+        const items = season();
+        const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 9){
+        const items = wasteland();
+        const resultElement = document.getElementById('result');    
         if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
             resultElement.style.color = 'red';
             resultElement.style.backgroundColor = 'aqua';

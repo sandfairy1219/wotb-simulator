@@ -1748,6 +1748,174 @@ function wasteland(){
 
 }
 
+function defender(){
+    const items = [];
+    items.push('Defenders 부적');
+    const randomtank = Math.floor(Math.random() * 100);
+    if (randomtank < 0.3){
+        items.push('(VIII) Caernarvon Defender')
+        addTank('(VIII) Caernarvon Defender');
+        console.log('(VIII) Caernarvon Defender');
+    }else if(randomtank < 0.3 * 2){
+        items.push('(VIII) Defender Mk .1')
+        addTank('(VIII) Defender Mk .1');
+        console.log('(VIII) Defender Mk .1');
+    }else if(randomtank < 0.3 * 3){
+        items.push('(VIII) T28 Defender')
+        addTank('(VIII) T28 Defender');
+        console.log('(VIII) T28 Defender');
+    }else if(randomtank < 0.3 * 4){
+        items.push('(VIII) AMX Defender')
+        addTank('(VIII) AMX Defender');
+        console.log('(VIII) AMX Defender');
+    }else if(randomtank < 0.3 * 5){
+        items.push('(VIII) TSL-7 Defender')
+        addTank('(VIII) TSL-7 Defender');
+        console.log('(VIII) TSL-7 Defender');
+    }else if(randomtank < 0.3 * 6){
+        items.push('(VIII) IS-3 Defender')
+        addTank('(VIII) IS-3 Defender');
+        console.log('(VIII) IS-3 Defender');
+    }else if(randomtank < 0.3 * 7){
+        items.push('(VII) Y5 ELC bis')
+        addTank('(VII) Y5 ELC bis');
+        console.log('(VII) Y5 ELC bis');
+    }else if(randomtank < 0.3 * 8){
+        items.push('(VI) Y5 Firefly')
+        addTank('(VI) Y5 Firefly');
+        console.log('(VI) Y5 Firefly');
+    }else if(randomtank < 0.3 * 9){
+        items.push('(V) Y5 T-34')
+        addTank('(V) Y5 T-34');
+        console.log('(V) Y5 T-34');
+    }else if(randomtank < 0.3 * 10){
+        items.push('(VI) Churchill W')
+        addTank('(VI) Churchill W');
+        console.log('(VI) Churchill W');
+    }
+
+    const randomavatar = Math.floor(Math.random() * 100);
+    if(randomavatar < 0.83){
+        items.push('날개깃 애니메이션 아바타')
+    }else if(randomavatar < 0.83 + 0.83){
+        items.push('애니메이션이 추가된 디펜더스 아바타')
+    }else if(randomavatar < 0.83 + 0.83 + 0.83){
+        items.push('타임 메신저 아바타')
+    }else if(randomavatar < 0.83 + 0.83 + 0.83 + 0.83){ 
+        items.push('애니메이션이 추가된 첩보 기관 아바타')
+    }else if(randomavatar < 0.83 + 0.83 + 0.83 + 0.83 + 0.83){
+        items.push('강철 방패 애니메이션 아바타')
+    }else if(randomavatar < 0.83 + 0.83 + 0.83 + 0.83 + 0.83 + 0.83){
+        items.push('비밀무기 아바타')
+    }
+
+    const randomxmboost = Math.random() * 100;
+    if(randomxmboost < 21.21){
+        items.push('경험치 3배 1개')
+    }else if(randomxmboost < 21.21 + 15.15){
+        items.push('경험치 3배 2개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09){
+        items.push('경험치 3배 3개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18){
+        items.push('경험치 4배 1개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18 + 12.12){
+        items.push('경험치 4배 2개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06){
+        items.push('경험치 4배 3개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09){
+        items.push('경험치 5배 1개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06){
+        items.push('경험치 5배 2개')
+    }else if(randomxmboost < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03){
+        items.push('경험치 5배 3개')
+    }
+    const randomfxpcertificate = Math.random() * 100;
+    if(randomfxpcertificate < 0.9){
+        items.push('자유경험치 28000 증서 1개')
+    } else if(randomfxpcertificate < 0.9 + 9.01){
+        items.push('자유경험치 2300 증서 1개')
+    } else if(randomfxpcertificate < 0.9 + 9.01 + 90.09){
+        items.push('자유경험치 200 증서 1개')
+    }
+    const randomgoldbooster = Math.random() * 100;
+    if(randomgoldbooster < 35.21){
+        items.push('골드 부스터 3개 ')
+    }else if(randomgoldbooster < 35.21 + 10.56){
+        items.push('골드 부스터 5개')
+    }else if(randomgoldbooster < 35.21 + 10.56 + 3.52){
+        items.push('골드 부스터 7개')
+    }else if(randomgoldbooster < 35.21 + 10.56 + 3.52 + 0.7){
+        items.push('골드 부스터 10개')
+    }
+    const randomcreditbooster = Math.random() * 100;
+    if(randomcreditbooster < 33.33){
+        items.push('크레딧 부스터 5개 (영웅)')
+    }else if(randomcreditbooster < 33.33 *2){
+        items.push('크레딧 부스터 5개 (희귀)')
+    } else if(randomcreditbooster < 33.33 *3){
+        items.push('크레딧 부스터 5개 (일반)')
+    }
+    const randomfxpbooster = Math.random() * 100;
+    if(randomfxpbooster < 33.33){
+        items.push('자유 경험치 부스터 5개 (영웅)')
+    }else if(randomfxpbooster < 33.33 *2){
+        items.push('자유 경험치 부스터 5개 (희귀)') 
+    }else if(randomfxpbooster < 33.33 *3){  
+        items.push('자유 경험치 부스터 5개 (일반)')
+    }
+    const randomxpbooster = Math.random() * 100;
+    if(randomxpbooster < 33.33){
+        items.push('경험치 부스터 5개 (영웅)')
+    }else if(randomxpbooster < 33.33 *2){
+        items.push('경험치 부스터 5개 (희귀)')
+    }else if(randomxpbooster < 33.33 *3){
+        items.push('경험치 부스터 5개 (일반)')
+    }
+    
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
 // 확률표 끝
 
 const slider = document.getElementById('slider');
@@ -1782,6 +1950,9 @@ slider.addEventListener('input', function () {
     } else if (slider.value == 9){
         slid.innerText = '황무지 전차 상자'
         containerimg.src = "img/wastelands.jpg";
+    } else if (slider.value == 10){
+        slid.innerText = 'Defender 상자'
+        containerimg.src = "img/defender.jpg";
     }
 });
 
@@ -1878,6 +2049,17 @@ open.addEventListener('click', function () {
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }else if(slider.value == 9){
         const items = wasteland();
+        const resultElement = document.getElementById('result');    
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 10){
+        const items = defender();
         const resultElement = document.getElementById('result');    
         if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
             resultElement.style.color = 'red';

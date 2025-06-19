@@ -801,9 +801,11 @@ slider.addEventListener('input', function() {
     if (slider.value == 1) {
         slid.innerText = '사물함';
         containerimg.src = "img/lockbox.jpg";
+        document.title = "사물함";
     }else if (slider.value == 2) {
         slid.innerText = '뒤풀이 상자';
         containerimg.src = "img/afterparty.jpg";
+        document.title = "뒤풀이 상자";
     }
 });
 

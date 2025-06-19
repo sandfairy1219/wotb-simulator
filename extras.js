@@ -1916,6 +1916,125 @@ function defender(){
     return items;
 }
 
+function slot(){
+
+    const items = [];
+    const randomball = Math.floor(Math.random() * 100);
+    const normalball = 3.23
+    if(randomball < 0.01){
+        items.push('다이아몬드 추첨 공 1')
+    }else if(randomball < 0.01 + 0.02){
+        items.push('다이아몬드 추첨 공 2')
+    }else if(randomball < 0.01 + 0.02 + 0.02){
+        items.push('다이아몬드 추첨 공 3')
+    }else if(randomball < 0.05 + normalball){
+        items.push('추첨공 1')
+    }else if(randomball < 0.05 + normalball *2){
+        items.push('추첨공 2')
+    }else if(randomball < 0.05 + normalball *3){
+        items.push('추첨공 3')
+    }else if(randomball < 0.05 + normalball *4){
+        items.push('추첨공 4')
+    }else if(randomball < 0.05 + normalball *5){
+        items.push('추첨공 5')
+    }else if(randomball < 0.05 + normalball *6){
+        items.push('추첨공 6')
+    }else if(randomball < 0.05 + normalball *7){
+        items.push('추첨공 7')
+    }else if(randomball < 0.05 + normalball *8){    
+        items.push('추첨공 8')
+    }else if(randomball < 0.05 + normalball *9){
+        items.push('추첨공 9')
+    }else if(randomball < 0.05 + normalball *10){
+        items.push('추첨공 10')
+    }else if(randomball < 0.05 + normalball *11){
+        items.push('추첨공 11')
+    }else if(randomball < 0.05 + normalball *12){
+        items.push('추첨공 12')
+    }else if(randomball < 0.05 + normalball *13){
+        items.push('추첨공 13')
+    }else if(randomball < 0.05 + normalball *14){
+        items.push('추첨공 14')
+    }else if(randomball < 0.05 + normalball *15){
+        items.push('추첨공 15')
+    }else if(randomball < 0.05 + normalball *16){
+        items.push('추첨공 16')
+    }else if(randomball < 0.05 + normalball *17){
+        items.push('추첨공 17')
+    }else if(randomball < 0.05 + normalball *18){
+        items.push('추첨공 18')
+    }else if(randomball < 0.05 + normalball *19){
+        items.push('추첨공 19')
+    }else if(randomball < 0.05 + normalball *20){
+        items.push('추첨공 20')
+    }else if(randomball < 0.05 + normalball *21){
+        items.push('추첨공 21')
+    }else if(randomball < 0.05 + normalball *22){
+        items.push('추첨공 22')
+    }else if(randomball < 0.05 + normalball *23){
+        items.push('추첨공 23')
+    }else if(randomball < 0.05 + normalball *24){
+        items.push('추첨공 24')
+    }else if(randomball < 0.05 + normalball *25){
+        items.push('추첨공 25')
+    }else if(randomball < 0.05 + normalball *26){
+        items.push('추첨공 26')
+    }else if(randomball < 0.05 + normalball *27){
+        items.push('추첨공 27')
+    }else if(randomball < 0.05 + normalball *28){
+        items.push('추첨공 28')
+    }else if(randomball < 0.05 + normalball *29){
+        items.push('추첨공 29')
+    }else if(randomball < 0.05 + normalball *30){
+        items.push('추첨공 30')
+    }else if(randomball < 0.05 + normalball *31){
+        items.push('추첨공 31')
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('다이아몬드'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
 // 확률표 끝
 
 const slider = document.getElementById('slider');
@@ -1926,33 +2045,47 @@ slider.addEventListener('input', function () {
     if (slider.value == 1) {
         slid.innerText = '만화경 상자 I';
         containerimg.src = "img/kaleidoscope1.jpg";
+        document.title = '만화경 상자 I'
     } else if (slider.value == 2) {
         slid.innerText = '만화경 상자 II';
         containerimg.src = "img/kaleidoscope2.jpg";
+        document.title = '만화경 상자 II'
     } else if (slider.value == 3) {
         slid.innerText = '만화경 상자 III';
         containerimg.src = "img/kaleidoscope3.jpg";
+        document.title = '만화경 상자 III'
     } else if (slider.value == 4) {
         slid.innerText = '만화경 상자 IV';
         containerimg.src = "img/kaleidoscope4.jpg";
+        document.title = '만화경 상자 IV'
     } else if (slider.value == 5){
         slid.innerText = '빅 보스 상자'
         containerimg.src = "img/bigboss.jpg";
+        document.title = '빅 보스 상자'
     } else if (slider.value == 6){
         slid.innerText = '나쁜 녀석들 상자'
         containerimg.src = "img/bad.jpg";
+        document.title = '나쁜 녀석들 상자'
     } else if (slider.value == 7){
         slid.innerText = '중력 이상 상자'
         containerimg.src = "img/gravity.jpg";
+        document.title = '중력 이상 상자'
     } else if (slider.value == 8){
         slid.innerText = '시즌 전차 상자'
         containerimg.src = "img/season.jpg";
+        document.title = '시즌 전차 상자'
     } else if (slider.value == 9){
         slid.innerText = '황무지 전차 상자'
         containerimg.src = "img/wastelands.jpg";
+        document.title = '황무지 전차 상자'
     } else if (slider.value == 10){
         slid.innerText = 'Defender 상자'
         containerimg.src = "img/defender.jpg";
+        document.title = 'Defender 상자'
+    } else if (slider.value == 11){
+        slid.innerText = '추첨 기계'
+        containerimg.src = "img/slot.jpg";
+        document.title = '추첨 기계'
     }
 });
 
@@ -2068,6 +2201,10 @@ open.addEventListener('click', function () {
             resultElement.style.backgroundColor = 'white';
             resultElement.style.color = 'black';
         }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 11){
+        const items = slot();
+        resultElement = document.getElementById('result');
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }
 });

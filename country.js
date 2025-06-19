@@ -1187,24 +1187,31 @@ slider.addEventListener('input', function() {
     if (slider.value == 1) {
         slid.innerText = '독일 상자';
         containerimg.src = "img/country.jpg";
+        document.title = '독일 상자'
     }else if (slider.value == 2) {
         slid.innerText = '미국 상자';
         containerimg.src = "img/usa.jpg";
+        document.title = '미국 상자'
     }else if (slider.value == 3) {
         slid.innerText = '소련 상자';
         containerimg.src = "img/ussr.jpg";
+        document.title = '소련 상자'
     }else if (slider.value == 4) {
         slid.innerText = '영국 상자';
         containerimg.src = "img/uk.jpg";
+        document.title = '영국 상자'
     }else if (slider.value == 5) {
         slid.innerText = '중국 상자';
         containerimg.src = "img/chinese.jpg";   
+        document.title = '중국 상자'
     }else if (slider.value == 6) {
         slid.innerText = '프랑스 상자';
         containerimg.src = "img/france.jpg";
+        document.title = '프랑스 상자'
     }else if (slider.value == 7) {
         slid.innerText = '유럽 상자';
         containerimg.src = "img/europe.jpg";
+        document.title =  '유럽 상자'
     }
 });
 

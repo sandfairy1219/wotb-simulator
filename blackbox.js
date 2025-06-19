@@ -1026,7 +1026,38 @@ const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');
 
 slider.addEventListener('input', function() {
-    slid.textContent = '블랙상자 단계 : '+slider.value;
+    if(slider.value == 1) {
+        slid.innerText = '블랙상자 1';
+        document.title = '블랙상자 1';
+    }else if(slider.value == 2) {
+        slid.innerText = '블랙상자 2';
+        document.title = '블랙상자 2';
+    }else if(slider.value == 3) {   
+        slid.innerText = '블랙상자 3';
+        document.title = '블랙상자 3';
+    }else if(slider.value == 4) {
+        slid.innerText = '블랙상자 4';
+        document.title = '블랙상자 4';
+    }
+    else if(slider.value == 5) {
+        slid.innerText = '블랙상자 5';
+        document.title = '블랙상자 5';  
+    }else if(slider.value == 6) {
+        slid.innerText = '블랙상자 6';
+        document.title = '블랙상자 6';
+    }else if(slider.value == 7) {
+        slid.innerText = '블랙상자 7';
+        document.title = '블랙상자 7';  
+    }else if(slider.value == 8) {
+        slid.innerText = '블랙상자 8';
+        document.title = '블랙상자 8';
+    }else if(slider.value == 9) {
+        slid.innerText = '블랙상자 9';
+        document.title = '블랙상자 9';
+    }else if(slider.value == 10) {
+        slid.innerText = '블랙상자 10';
+        document.title = '블랙상자 10';
+    }
 });
 let open = document.getElementById('open')
 open.addEventListener('click', function() {
@@ -1047,6 +1078,7 @@ open.addEventListener('click', function() {
     }
     resultElement.innerText = `결과: ${items.join(', ')}`;
     } else if (slider.value == 2){
+        
         const items = blackboxlv2();
         const resultElement = document.getElementById('result');
         if (items.includes('블랙상자 3')) {

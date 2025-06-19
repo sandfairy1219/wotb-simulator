@@ -317,10 +317,12 @@ slider.addEventListener('input', function() {
     if(slider.value == 1){
         slid.innerText = '최상위 포식자 상자';
         containerimg.src = "img/alpha.jpg"
+        document.title = '최상위 포식자 상자';
     }
     if(slider.value == 2){
         slid.innerText = 'IX 단계 상자';
         containerimg.src = "img/t9.jpg"
+        document.title = 'IX 단계 상자';
     }
 });
 

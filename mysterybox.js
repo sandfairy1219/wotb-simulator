@@ -394,10 +394,13 @@ const slid = document.getElementById('slid');
 slider.addEventListener('input', function() {
     if (slider.value === '1') {
         slid.innerText = '미스터리 상자 1';
+        document.title = '미스터리 상자 1';
     }else if (slider.value === '2') {
         slid.innerText = '미스터리 상자 2';
+        document.title = '미스터리 상자 2';
     }else if (slider.value === '3') {
         slid.innerText = '미스터리 상자 3';
+        document.title = '미스터리 상자 3'
     }
 });
 

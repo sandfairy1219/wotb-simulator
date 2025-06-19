@@ -7,6 +7,7 @@ const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');
 
 
+
 function updateFinalTanks() {
     finaltanks.innerText = '획득한 탱크: ' + tanks.join(', ');
 }
@@ -989,15 +990,19 @@ slider.addEventListener('input', function() {
     if (slider.value == 1) {
         slid.innerText = '경전차 상자'
         containerimg.src = 'img/light.jpg';
+        document.title = '경전차 상자'
     } else if(slider.value == 2) {
         slid.innerText = '중형전차 상자'
         containerimg.src = 'img/medium.jpg';
+        document.title = '중형전차 상자'
     } else if(slider.value == 3) {
         slid.innerText = '중전차 상자'
         containerimg.src = 'img/heavy.jpg';
+        document.title = '중전차 상자'
     } else if(slider.value == 4) {
         slid.innerText = '구축전차 상자'
         containerimg.src = 'img/td.jpg';
+        document.title = '구축전차 상자'
     }
 });
 

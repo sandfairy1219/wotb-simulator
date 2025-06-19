@@ -818,9 +818,11 @@ slider.addEventListener('input', function() {
     if(slider.value == '1'){
         slid.innerText = '대규모 상자';
         containerimg.src = 'img/massive.jpg';
+        document.title = '대규모 상자';
     }else if(slider.value == '2'){
         slid.innerText = '대규모 행운의 VIII 단계 상자'
         containerimg.src = 'img/VIII.jpg';
+        document.title = '대규모 행운의 VIII 단계 상자';
     }
 });
 

@@ -196,23 +196,23 @@ function massive() {
 
     const randomxpcertificate = Math.floor(Math.random() * 100);
     if (randomxpcertificate < 21.21) {
-        items.push('경험치 3배 증서 5개');
+        items.push('경험치 3배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15) {
-        items.push('경험치 3배 증서 10개');
+        items.push('경험치 3배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09) {
-        items.push('경험치 3배 증서 15개');
+        items.push('경험치 3배 15개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18) {
-        items.push('경험치 4배 증서 5개');
+        items.push('경험치 4배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12) {
-        items.push('경험치 4배 증서 10개');
+        items.push('경험치 4배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06) {
-        items.push('경험치 4배 증서 15개');
+        items.push('경험치 4배 15개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09) {
-        items.push('경험치 5배 증서 5개');
+        items.push('경험치 5배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06) {
-        items.push('경험치 5배 증서 10개');
+        items.push('경험치 5배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03) {
-        items.push('경험치 5배 증서 15개');
+        items.push('경험치 5배 15개');
     }
 
     const randomgarage = Math.floor(Math.random() * 100);
@@ -574,23 +574,23 @@ function VIII(){
 
     const randomxpcertificate = Math.floor(Math.random() * 100);
     if (randomxpcertificate < 21.21) {
-        items.push('경험치 3배 증서 5개');
+        items.push('경험치 3배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15) {
-        items.push('경험치 3배 증서 10개');
+        items.push('경험치 3배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09) {
-        items.push('경험치 3배 증서 15개');
+        items.push('경험치 3배 15개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18) {
-        items.push('경험치 4배 증서 5개');
+        items.push('경험치 4배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12) {
-        items.push('경험치 4배 증서 10개');
+        items.push('경험치 4배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06) {
-        items.push('경험치 4배 증서 15개');
+        items.push('경험치 4배 15개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09) {
-        items.push('경험치 5배 증서 5개');
+        items.push('경험치 5배 5개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06) {
-        items.push('경험치 5배 증서 10개');
+        items.push('경험치 5배 10개');
     }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03) {
-        items.push('경험치 5배 증서 15개');
+        items.push('경험치 5배 15개');
     }
 
     const randomgarage = Math.floor(Math.random() * 100);
@@ -774,13 +774,352 @@ function VIII(){
 }
 
 
+function t9massive(){
+    const items = [];
+
+    items.push('대규모 행운의 IX단계 부적');
+
+    usedgoldd += 15000;
+    usedgold.innerText = `사용한 골드: ${usedgoldd}`;
+
+    const tanks = [
+        '(IX) MBT-B',
+        '(IX) WZ-114',
+        '(IX) BZ-176',
+        '(IX) BZ-58-2',
+        '(IX) Char Futur 4',
+        '(IX) Lorraine 50 t',
+        '(IX) AMX 30 1er prot.',
+        '(IX) Erich Konzept I',
+        '(IX) Kpz 70',
+        '(IX) FVE Defender',
+        '(IX) Cobra',
+        '(IX) TL-7-120',
+        '(IX) K-91',
+        '(IX) Object 752',
+        '(IX) Object 452K'
+    ];
+    const selectedTank = tanks[Math.floor(Math.random() * tanks.length)];
+    items.push(selectedTank);
+    console.log(selectedTank);
+    addTank(selectedTank);
+
+    const randombox = Math.floor(Math.random() * 100);
+    if (randombox < 3.15) {
+        items.push('메가 상자 2개');
+        addBox('메가 상자 2개');
+    }else if (randombox < 3.15 + 1.58){
+        items.push('메가 상자 3개');
+        addBox('메가 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63) {
+        items.push('메가 상자 5개');
+        addBox('메가 상자 5개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73) {
+        items.push('미스터리 상자 3개');
+        addBox('미스터리 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52) {
+        items.push('미스터리 상자 5개');
+        addBox('미스터리 상자 5개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26) {
+        items.push('미스터리 상자 10개');
+        addBox('미스터리 상자 10개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73) {
+        items.push('모두 모아보세요 상자 3개');
+        addBox('모두 모아보세요 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21) {
+        items.push('모두 모아보세요 상자 5개');
+        addBox('모두 모아보세요 상자 5개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95) {
+        items.push('모두 모아보세요 상자 7개');
+        addBox('모두 모아보세요 상자 7개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52) {
+        items.push('끝내줘요 상자 1개');
+        addBox('끝내줘요 상자 1개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95) {
+       items.push('끝내줘요 상자 2개');
+       addBox('끝내줘요 상자 2개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32) {
+        items.push('끝내줘요 상자 3개');
+        addBox('끝내줘요 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31) {
+        items.push('Titan 전차 상자 3개');
+        addBox('Titan 전차 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73) {
+        items.push('Titan 전차 상자 5개');
+        addBox('Titan 전차 상자 5개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52) {
+        items.push('Titan 전차 상자 7개');
+        addBox('Titan 전차 상자 7개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31) {
+        items.push('Defenders 상자 3개');
+        addBox('Defenders 상자 3개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73) {
+        items.push('Defenders 상자 5개');
+        addBox('Defenders 상자 5개');
+    }else if (randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52) {
+        items.push('Defenders 상자 7개');
+        addBox('Defenders 상자 7개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31) {
+        items.push('시즌 전차 상자 3개')
+        addBox('시즌 전차 상자 3개');   
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73) {  
+        items.push('시즌 전차 상자 5개')
+        addBox('시즌 전차 상자 5개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52) { 
+        items.push('시즌 전차 상자 10개')
+        addBox('시즌 전차 상자 10개');  
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79) {
+        items.push('블랙 상자 I 2개');
+        addBox('블랙 상자 I 2개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89) {
+        items.push('블랙 상자 I 3개');
+        addBox('블랙 상자 I 3개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95) {
+        items.push('블랙 상자 I 5개');
+        addBox('블랙 상자 I 5개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31) { 
+        items.push('Gravedigger 상자 3개'); 
+        addBox('Gravedigger 상자 3개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31 + 4.73) {
+        items.push('Gravedigger 상자 5개');
+        addBox('Gravedigger 상자 5개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31 + 4.73 + 2.52) {
+        items.push('Gravedigger 상자 10개');
+        addBox('Gravedigger 상자 10개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31 + 4.73 + 2.52 + 6.31) {
+        items.push('만화경 상자 I 3개')
+        addBox('만화경 상자 I 3개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73) {
+        items.push('만화경 상자 I 5개')
+        addBox('만화경 상자 I 5개');
+    }else if(randombox < 3.15 + 1.58 + 0.63 + 4.73 + 2.52 + 1.26 + 4.73 + 2.21 + 0.95 + 2.52 + 0.95 + 0.32 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52 + 3.79 + 1.89 + 0.95 + 6.31 + 4.73 + 2.52 + 6.31 + 4.73 + 2.52) { 
+        items.push('만화경 상자 I 10개')
+        addBox('만화경 상자 I 10개');
+    }
+
+    const randommission = Math.floor(Math.random() * 100);
+    if (randommission < 8.33) {
+        items.push('끝내줘요! 상자 임무 (15승 - 상자 1개)');
+    } else if (randommission < 8.33 * 2) {
+        items.push('끝내줘요! 상자 임무 (25승 - 상자 2개)');
+    } else if (randommission < 8.33 * 3) {
+        items.push('끝내줘요! 상자 임무 (35승 - 상자 3개)');
+    } else if (randommission < 8.33 * 4) {
+        items.push('미스터리 상자 임무 (50승 - 상자 10개)');
+    } else if (randommission < 8.33 * 5) {
+        items.push('미스터리 상자 임무 (25승 - 상자 5개)');
+    } else if (randommission < 8.33 * 6) {
+        items.push('미스터리 상자 임무 (15승 - 상자 3개)');
+    } else if (randommission < 8.33 * 7) {
+        items.push('모두 모아보세요! 상자 임무 (10판 - 상자 1개)');
+    } else if (randommission < 8.33 * 8) {
+        items.push('모두 모아보세요! 상자 임무 (25판 - 상자 3개)');
+    } else if (randommission < 8.33 * 9) {
+        items.push('모두 모아보세요! 상자 임무 (50판 - 상자 5개)');
+    } else if (randommission < 8.33 * 10) {
+        items.push('메가 상자 임무 (15승 - 상자 1개)');
+    } else if (randommission < 8.33 * 11) {
+        items.push('메가 상자 임무 (25승 - 상자 3개)');
+    } else if (randommission < 8.33 * 12) {
+        items.push('메가 상자 임무 (50승 - 상자 5개)');
+    }
+
+    const randomxpcertificate = Math.floor(Math.random() * 100);
+    if (randomxpcertificate < 21.21) {
+        items.push('경험치 3배 5개');
+    }else if (randomxpcertificate < 21.21 + 15.15) {
+        items.push('경험치 3배 10개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09) {
+        items.push('경험치 3배 15개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18) {
+        items.push('경험치 4배 5개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12) {
+        items.push('경험치 4배 10개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06) {
+        items.push('경험치 4배 15개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09) {
+        items.push('경험치 5배 5개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06) {
+        items.push('경험치 5배 10개');
+    }else if (randomxpcertificate < 21.21 + 15.15 + 9.09 + 18.18 + 12.12 + 6.06 + 9.09 + 6.06 + 3.03) {
+        items.push('경험치 5배 15개');
+    }
+
+    const randomItem = Math.floor(Math.random() * 100);
+    if (randomItem < 7.69) {
+        items.push('이모티콘 조명');
+    } else if (randomItem < 7.69 * 2) {
+        items.push('격통의 창');
+    } else if (randomItem < 7.69 * 3) {
+        items.push('테슬라 건');
+    } else if (randomItem < 7.69 * 4) {
+        items.push('냉각포');
+    } else if (randomItem < 7.69 * 5) {
+        items.push('테서랙트');
+    } else if (randomItem < 7.69 * 6) {
+        items.push('윌리 버드');
+    } else if (randomItem < 7.69 * 7) {
+        items.push('MG 08');
+    } else if (randomItem < 7.69 * 8) {
+        items.push('깜짝상자');
+    } else if (randomItem < 7.69 * 9) {
+        items.push('영혼 인도자');
+    } else if (randomItem < 7.69 * 10) {
+        items.push('밤의 날개');
+    } else if (randomItem < 7.69 * 11) {
+        items.push('블리츠 MP방위군');
+    } else if (randomItem < 7.69 * 12) {
+        items.push('D-2 Model 1926 AA Mount');
+    } else if (randomItem < 7.69 * 13) {
+        items.push('호박 초롱');
+    }
+
+    const randomcamo = Math.floor(Math.random() * 100);
+    if (randomcamo < 7.14) {
+        items.push('Burn 위장');
+    } else if (randomcamo < 7.14 * 2) {
+        items.push('촉룡 위장');
+    }else if( randomcamo < 7.14 * 3) {
+        items.push('강철 기병 위장');
+    } else if (randomcamo < 7.14 * 4) {
+        items.push('천문학자 위장');
+    } else if (randomcamo < 7.14 * 5) {
+        items.push('성채 위장');
+    }else if( randomcamo < 7.14 * 6) {
+        items.push('Galvanox 위장');
+    } else if (randomcamo < 7.14 * 7) {
+        items.push('Win Peaks 위장');
+    } else if (randomcamo < 7.14 * 8) {
+        items.push('아라크니드 위장');
+    } else if (randomcamo < 7.14 * 9) {
+        items.push('녹주석 위장');
+    } else if (randomcamo < 7.14 * 10) {    
+        items.push('눈꼴무늬 위장');
+    } else if (randomcamo < 7.14 * 11) {
+        items.push('묠니르 위장');
+    }
+
+    const randomAvatar = Math.floor(Math.random() * 100);
+    if (randomAvatar < 4.17) {
+        items.push('당근 코 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 2) {
+        items.push('잭 오 랜턴 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 3) {
+        items.push('샌드웜 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 4) {
+        items.push('베스트 프랜드 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 5) {
+        items.push('바다괴물 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 6) {
+        items.push('독장미 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 7) {
+        items.push('영원한 삶 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 8) {
+        items.push('행복한 나무 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 9) {
+        items.push('청동 전사 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 10) {
+        items.push('전기 충격 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 11) {
+        items.push('달토끼 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 12) {
+        items.push('무스 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 13) {
+        items.push('접근금지 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 14) {
+        items.push('아야메 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 15) {
+        items.push('썬더버드 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 16) {
+        items.push('흉포한 불도그 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 17) {
+        items.push('완전입수 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 18) {
+        items.push('꽥꽥이 납치 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 19) {
+        items.push('셰프의 캠핑카 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 20) {
+        items.push('야생 벌꿀 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 21) {
+        items.push('해상 기동 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 22) {
+        items.push('한 입 하실 분? 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 23) {
+        items.push('신비로운 드래곤 애니메이션 아바타');
+    } else if (randomAvatar < 4.17 * 24) {
+        items.push('파이크오사우루스 애니메이션 아바타');
+    }
+
+    const randomgarage = Math.floor(Math.random() * 100);
+    if (randomgarage < 3.12) {
+        items.push('Chief 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12) {
+        items.push('월면차 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12) {
+        items.push('Bigfoot AWD Summer Edition 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12 + 3.12) {
+        items.push('Bigfoot AWD Camo Edition 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12 + 3.12 + 3.12) {
+        items.push('그랜드 다이아몬드 300D 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12) {
+        items.push('모터사이클 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12) {
+        items.push('사륜구동 차고 설비');
+    }else if (randomgarage < 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12 + 3.12) {
+        items.push('Sky-High Precious 70 차고 설비');
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+    const el = document.createElement('div');
+    const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+    el.textContent = items.join(', ');
+    container.appendChild(el);
+    
+   
+    if (autoslider && autoslider.checked) {
+        el.scrollIntoView({ behavior: 'smooth' });
+    }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+    
+    
+    window.addEventListener('scroll', function() {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+    
+    howmuch += 1
+    times.innerText = `상자를 깐 횟수: ${howmuch}`;
 
 
 
 
 
 
-let open = document.getElementById('open')
+
+    return items
+}
+
+
+    let open = document.getElementById('open')
 open.addEventListener('click', function() {
     if(slider.value == '1'){
     const items = massive();
@@ -805,6 +1144,17 @@ open.addEventListener('click', function() {
         resultElement.style.color = 'black';
     }
     resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == '3'){
+    const items = t9massive();
+    const resultElement = document.getElementById('result');
+    if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)'))) {
+        resultElement.style.color = 'red';
+        resultElement.style.backgroundColor = 'aqua';
+    } else {
+        resultElement.style.backgroundColor = 'white';
+        resultElement.style.color = 'black';
+    }
+    resultElement.innerText = `결과: ${items.join(', ')}`;
     }
 });
 
@@ -823,6 +1173,10 @@ slider.addEventListener('input', function() {
         slid.innerText = '대규모 행운의 VIII 단계 상자'
         containerimg.src = 'img/VIII.jpg';
         document.title = '대규모 행운의 VIII 단계 상자';
+    }else if(slider.value == '3'){
+        slid.innerText = '대규모 행운의 IX 단계 상자';
+        containerimg.src = 'img/t9massive.jpg';
+        document.title = '대규모 행운의 IX 단계 상자';
     }
 });
 

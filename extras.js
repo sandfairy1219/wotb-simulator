@@ -1916,86 +1916,185 @@ function defender(){
     return items;
 }
 
-function slot(){
+function esports(){
 
     const items = [];
-    const randomball = Math.floor(Math.random() * 100);
-    const normalball = 3.23
-    if(randomball < 0.01){
-        items.push('다이아몬드 추첨 공 1')
-    }else if(randomball < 0.01 + 0.02){
-        items.push('다이아몬드 추첨 공 2')
-    }else if(randomball < 0.01 + 0.02 + 0.02){
-        items.push('다이아몬드 추첨 공 3')
-    }else if(randomball < 0.05 + normalball){
-        items.push('추첨공 1')
-    }else if(randomball < 0.05 + normalball *2){
-        items.push('추첨공 2')
-    }else if(randomball < 0.05 + normalball *3){
-        items.push('추첨공 3')
-    }else if(randomball < 0.05 + normalball *4){
-        items.push('추첨공 4')
-    }else if(randomball < 0.05 + normalball *5){
-        items.push('추첨공 5')
-    }else if(randomball < 0.05 + normalball *6){
-        items.push('추첨공 6')
-    }else if(randomball < 0.05 + normalball *7){
-        items.push('추첨공 7')
-    }else if(randomball < 0.05 + normalball *8){    
-        items.push('추첨공 8')
-    }else if(randomball < 0.05 + normalball *9){
-        items.push('추첨공 9')
-    }else if(randomball < 0.05 + normalball *10){
-        items.push('추첨공 10')
-    }else if(randomball < 0.05 + normalball *11){
-        items.push('추첨공 11')
-    }else if(randomball < 0.05 + normalball *12){
-        items.push('추첨공 12')
-    }else if(randomball < 0.05 + normalball *13){
-        items.push('추첨공 13')
-    }else if(randomball < 0.05 + normalball *14){
-        items.push('추첨공 14')
-    }else if(randomball < 0.05 + normalball *15){
-        items.push('추첨공 15')
-    }else if(randomball < 0.05 + normalball *16){
-        items.push('추첨공 16')
-    }else if(randomball < 0.05 + normalball *17){
-        items.push('추첨공 17')
-    }else if(randomball < 0.05 + normalball *18){
-        items.push('추첨공 18')
-    }else if(randomball < 0.05 + normalball *19){
-        items.push('추첨공 19')
-    }else if(randomball < 0.05 + normalball *20){
-        items.push('추첨공 20')
-    }else if(randomball < 0.05 + normalball *21){
-        items.push('추첨공 21')
-    }else if(randomball < 0.05 + normalball *22){
-        items.push('추첨공 22')
-    }else if(randomball < 0.05 + normalball *23){
-        items.push('추첨공 23')
-    }else if(randomball < 0.05 + normalball *24){
-        items.push('추첨공 24')
-    }else if(randomball < 0.05 + normalball *25){
-        items.push('추첨공 25')
-    }else if(randomball < 0.05 + normalball *26){
-        items.push('추첨공 26')
-    }else if(randomball < 0.05 + normalball *27){
-        items.push('추첨공 27')
-    }else if(randomball < 0.05 + normalball *28){
-        items.push('추첨공 28')
-    }else if(randomball < 0.05 + normalball *29){
-        items.push('추첨공 29')
-    }else if(randomball < 0.05 + normalball *30){
-        items.push('추첨공 30')
-    }else if(randomball < 0.05 + normalball *31){
-        items.push('추첨공 31')
+
+    const randomtank = Math.floor(Math.random() * 100);
+    if (randomtank < 0.14){
+        items.push('(VIII) WZ-122 TM')
+        addTank('(VIII) WZ-122 TM');
+    }else if(randomtank < 0.14 * 2){
+        items.push('(VIII) Skoda T 27')
+        addTank('(VIII) Skoda T 27');
+    }else if(randomtank < 0.14 * 3){
+        items.push('(VIII) Skoda T 56')
+        addTank('(VIII) Skoda T 56');
+    }else if(randomtank < 0.14 * 3 + 0.45){
+        items.push('(VIII) Progetto 46')
+        addTank('(VIII) Progetto 46');
+    }else if(randomtank < 0.14 * 4 + 0.45){
+        items.push('(VIII) AMX CDC')
+        addTank('(VIII) AMX CDC');
+    }else if(randomtank < 0.14 * 4 + 0.45 *2){
+        items.push('(VIII) Panzer 58')
+        addTank('(VIII) Panzer 58');
+    }else if(randomtank < 0.14 * 5 + 0.45 *2){
+        items.push('(VIII) TS-5')
+        addTank('(VIII) TS-5');
+    }else if(randomtank < 0.14 * 5 + 0.45 *3){
+        items.push('(VIII) T-54 mod.1')
+        addTank('(VIII) T-54 mod.1');
+    }else if(randomtank < 0.14 * 6 + 0.45 *3){
+        items.push('(VIII) EMIL 1951')
+        addTank('(VIII) EMIL 1951');
+    }else if(randomtank < 0.14 * 7 + 0.45 *3){
+        items.push('(VIII) Lansen C')
+        addTank('(VIII) Lansen C');
+    }else if(randomtank < 0.14 * 8 + 0.45 *3){
+        items.push('(VIII) B-C Bourrasque')
+        addTank('(VIII) B-C Bourrasque');
+    }else if(randomtank < 0.14 * 8 + 0.45 *4){
+        items.push('(VIII) M4A1 Rev.')
+        addTank('(VIII) M4A1 Rev.');
+    }else if(randomtank < 0.14 * 9 + 0.45 *4){
+        items.push('(VIII) Somua SM')
+        addTank('(VIII) Somua SM');
+    }else if(randomtank < 0.14 * 10 + 0.45 *4){
+        items.push('(VIII) AMX CDA 105')
+        addTank('(VIII) AMX CDA 105');
+    }else if(randomtank < 0.14 * 10 + 0.45 *5){
+        items.push('(VIII) FCM 50 t')
+        addTank('(VIII) FCM 50 t');
+    }else if(randomtank < 0.14 * 10 + 0.45 *6){
+        items.push('(VIII) leKpz M 41 90 mm')
+        addTank('(VIII) leKpz M 41 90 mm');
+    }else if(randomtank < 0.14 * 10 + 0.45 *7){
+        items.push('(VIII) Type 57')
+        addTank('(VIII) Type 57');
+    }else if(randomtank < 0.14 * 10 + 0.45 *8){
+        items.push('(VIII) Centurion Mk. 5/1')
+        addTank('(VIII) Centurion Mk. 5/1');
+    }else if(randomtank < 0.14 * 11 + 0.45 *8){
+        items.push('(VIII) Chimera')
+        addTank('(VIII) Chimera');
+    }else if(randomtank < 0.14 * 11 + 0.45*9){
+        items.push('(VIII) T26E5')
+        addTank('(VIII) T26E5');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10){
+        items.push('(VIII) Obj. 252U')
+        addTank('(VIII) Obj. 252U');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10 + 0.68){
+        items.push('(VII) Type 62')
+        addTank('(VII) Type 62');
+    }else if(randomtank < 0.14 * 11 + 0.45*10 + 0.68*2){
+        items.push('(VII) E 25')
+        addTank('(VII) E 25');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10 + 0.68 *3){
+        items.push('(VII) T23E3')
+        addTank('(VII) T23E3');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10 + 0.68 *4){
+        items.push('(VII) Gravedigger')
+        addTank('(VII) Gravedigger');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10 + 0.68 *4 + 0.23){
+        items.push('(VII) Titan H-Nd')
+        addTank('(VII) Titan H-Nd');
+    }else if(randomtank < 0.14 * 11 + 0.45 *10 + 0.68 *5 + 0.23){
+        items.push('(VII) T28 HTC')
+        addTank('(VII) T28 HTC');
+    }
+
+    const randomcredit = Math.floor(Math.random() * 100);
+    if (randomcredit < 41.1){
+        items.push('크레딧 50,000개')
+    }else if(randomcredit < 41.1 + 30.82){
+        items.push('크레딧 75,000개')
+    }else if(randomcredit < 41.1 + 30.82 + 17.12){
+        items.push('크레딧 100,000개')
+    }else if(randomcredit < 41.1 + 30.82 + 17.12 + 6.85){
+        items.push('크레딧 200,000개')
+    }else if(randomcredit < 41.1 + 30.82 + 17.12 + 6.85 + 3.42){
+        items.push('크레딧 500,000개')
+    }else if(randomcredit < 41.1 + 30.82 + 17.12 + 6.85 + 3.42 + 0.68){
+        items.push('크레딧 1,000,000개')
+    }
+
+    const randomcamo = Math.floor(Math.random() * 100);
+    if(randomcamo < 1.33){
+        items.push('플래툰 스매셔 위장')
+    }else if(randomcamo < 1.33 *2){
+        items.push('플래툰 슬래셔 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27){
+        items.push('플라스마 그리드 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *2){
+        items.push('랭크 에이스 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *3){
+        items.push('랭크 전투위장 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4){
+        items.push('일류 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66){
+        items.push('춘계 시즌 토너먼트위장 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *2){
+        items.push('칼훈 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *3){
+        items.push('스틸 아이르비스 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *4){
+        items.push('스틸 센티널 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *5){
+        items.push('용암 쇄도 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *6){
+        items.push('사이키 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *7){
+        items.push('더 빠르게, 더 높게, 더 강하게 위장')
+    }else if(randomcamo < 1.33 *2 + 0.27 *4 + 2.66 *8){
+        items.push('환희 위장')
+    }
+    
+    const randombooster = Math.random() * 100;
+    if(randombooster < 2.78){
+        items.push('자유 경험치 부스터 10개 (영웅)')
+    }else if(randombooster < 2.78 *2){
+        items.push('전투 경험치 부스터 10개 (영웅)')
+    }else if(randombooster < 2.78 *3){  
+        items.push('크레딧 부스터 10개 (영웅)')
+    }else if(randombooster < 2.78 *4){
+        items.push('승무원 경험치 부스터 10개 (영웅)')
+    }else if(randombooster < 2.78 *4 + 8.33){
+        items.push('자유 경험치 부스터 10개 (희귀)')
+    }else if(randombooster < 2.78 *4 + 8.33 *2){
+        items.push('전투 경험치 부스터 10개 (희귀)')
+    }else if(randombooster < 2.78 *4 + 8.33 *3){
+        items.push('크레딧 부스터 10개 (희귀)')
+    }else if(randombooster < 2.78 *4 + 8.33 *4){
+        items.push('승무원 경험치 부스터 10개 (희귀)')  
+    }else if(randombooster < 2.78 *4 + 8.33 *4 +13.89){
+        items.push('자유 경험치 부스터 10개 (일반)')
+    }else if(randombooster < 2.78 *4 + 8.33*4 +13.89 *2){
+        items.push('전투 경험치 부스터 10개 (일반)')    
+    }else if(randombooster < 2.78 *4 + 8.33*4 +13.89 *3){
+        items.push('크레딧 부스터 10개 (일반)')
+    }else if(randombooster < 2.78 *4 + 8.33*4 +13.89 *4){
+        items.push('승무원 경험치 부스터 10개 (일반)')
+    }
+
+    const randomcoin = Math.random() * 100;
+    if(randomcoin < 3.68){
+        items.push('코인 250개')
+    }else if(randomcoin < 3.68 + 2.94){
+        items.push('코인 300개')
+    }else if(randomcoin < 3.68 + 2.94 + 2.21){
+        items.push('코인 500개')
+    }else if(randomcoin < 3.68 + 2.94 + 2.21 + 1.03){
+        items.push('코인 1000개')
+    }else if(randomcoin < 3.68 + 2.94 + 2.21 + 1.03 + 0.15){
+        items.push('코인 2000개')
     }
 
     let autoslider = document.getElementById('autoslide');
 
     function addLogItem(items, container) {
         const el = document.createElement('div');
-        const hasSpecialItem = items.some(item => item.includes('다이아몬드'));
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
     
     // 특별 아이템이 있으면 스타일 적용
     if (hasSpecialItem) {
@@ -2033,6 +2132,8 @@ function slot(){
 
 
     return items;
+
+
 }
 
 // 확률표 끝
@@ -2083,9 +2184,9 @@ slider.addEventListener('input', function () {
         containerimg.src = "img/defender.jpg";
         document.title = 'Defender 상자'
     } else if (slider.value == 11){
-        slid.innerText = '추첨 기계'
-        containerimg.src = "img/slot.jpg";
-        document.title = '추첨 기계'
+        slid.innerText = 'esports 상자'
+        containerimg.src = "img/esports.jpg";
+        document.title = 'esports 상자'
     }
 });
 
@@ -2203,8 +2304,15 @@ open.addEventListener('click', function () {
         }
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }else if(slider.value == 11){
-        const items = slot();
-        resultElement = document.getElementById('result');
+        const items = esports();
+        const resultElement = document.getElementById('result');    
+        if (items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }
 });

@@ -263,6 +263,170 @@ function t9(){
 
     const items = []
 
+    items.push('IX 단계 전차 부적');
+
+    const randomtank = Math.random() * 100;
+    if(randomtank < 5){
+        const tanks = [
+            '(IX) WZ-114',
+            '(IX) Char Futur 4',
+            '(IX) AMX 30 1er prot.',
+            '(IX) Kpz 70',
+            '(IX) T-55 A',
+            '(IX) Cobra',
+            '(IX) TL-7-120',
+            '(IX) K-91',
+            '(IX) Object 752',
+            '(IX) Object 452K'
+        ]
+        const selectedTank = tanks[Math.floor(Math.random() * tanks.length)];
+        items.push(selectedTank);
+        console.log(selectedTank);
+        addTank(selectedTank);
+    }
+
+    const randomCamouflage = Math.random() * 100;
+    if(randomCamouflage < 5){
+        const camouflages = [
+            '촉룡 위장',
+            '천문학자 위장',
+            '아라크니드 위장',
+            '강철 기병 위장',
+            'Galvanox 위장',
+            '눈꼴무늬 위장',
+            '묠니르 위장',
+            'Win Peaks 위장',
+            'Burn 위장',
+        ]
+        const selectedCamo = camouflages[Math.floor(Math.random() * camouflages.length)];
+        items.push(selectedCamo);
+        console.log(selectedCamo);
+        addCamo(selectedCamo);
+    }
+
+    const randomxpboost = Math.random() * 100;
+    if(randomxpboost < 7.5){
+        items.push('경험치 5배 1개');
+    }else if(randomxpboost < 7.5 + 5){
+        items.push('경험치 5배 2개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5){
+        items.push('경험치 5배 3개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5){
+        items.push('경험치 4배 1개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5 + 11.67){
+        items.push('경험치 4배 2개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5 + 11.67 + 5.83){
+        items.push('경험치 4배 3개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5 + 11.67 + 5.83 + 23.33){
+        items.push('경험치 3배 1개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5 + 11.67 + 5.83 + 23.33 + 16.67){
+        items.push('경험치 3배 2개');
+    }else if(randomxpboost < 7.5 + 5 + 2.5 + 17.5 + 11.67 + 5.83 + 23.33 + 16.67 + 10){
+        items.push('경험치 3배 3개');
+    }
+
+    const randomfxpcertificate = Math.random() * 100;
+    if(randomfxpcertificate < 8.33){
+        items.push('자유 경험치 28000증서 1개 ');
+    }else if(randomfxpcertificate < 8.33 + 5){
+        items.push('자유 경험치 28000증서 2개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67){
+        items.push('자유 경험치 28000증서 3개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44){
+        items.push('자유 경험치 2300증서 2개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44 + 11.67){
+        items.push('자유 경험치 2300증서 3개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44 + 11.67 + 3.89){
+        items.push('자유 경험치 2300증서 4개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44 + 11.67 + 3.89 + 27.78){
+        items.push('자유 경험치 200증서 20개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44 + 11.67 + 3.89 + 27.78 + 16.67){
+        items.push('자유 경험치 200증서 25개');
+    }else if(randomfxpcertificate < 8.33 + 5 + 1.67 + 19.44 + 11.67 + 3.89 + 27.78 + 16.67 + 5.56){
+        items.push('자유 경험치 200증서 30개');
+    }
+
+    const randombooster = Math.random() * 100;
+    if(randombooster < 2.08){
+        items.push('크레딧 부스터 (영웅) 15개');
+    }else if(randombooster < 2.08*2){
+        items.push('자유 경험치 부스터 (영웅) 15개');
+    }else if(randombooster < 2.08*3){
+        items.push('경험치 부스터 (영웅) 15개');
+    }else if(randombooster < 2.08*4){
+        items.push('승무원 경험치 부스터 (영웅) 15개');
+    }else if(randombooster < 2.08*4 + 1.25){
+        items.push('크레딧 부스터 (영웅) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*2){
+        items.push('자유 경험치 부스터 (영웅) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*3){
+        items.push('경험치 부스터 (영웅) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4){
+        items.push('승무원 경험치 부스터 (영웅) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42){
+        items.push('크레딧 부스터 (영웅) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*2){
+        items.push('자유 경험치 부스터 (영웅) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*3){
+        items.push('경험치 부스터 (영웅) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4){
+        items.push('승무원 경험치 부스터 (영웅) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86){
+        items.push('크레딧 부스터 (희귀) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*2){
+        items.push('자유 경험치 부스터 (희귀) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*3){
+        items.push('경험치 부스터 (희귀) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4){
+        items.push('승무원 경험치 부스터 (희귀) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92){
+        items.push('크레딧 부스터 (희귀) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*2){
+        items.push('자유 경험치 부스터 (희귀) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*3){
+        items.push('경험치 부스터 (희귀) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4){
+        items.push('승무원 경험치 부스터 (희귀) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97){
+        items.push('크레딧 부스터 (희귀) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*2){
+        items.push('자유 경험치 부스터 (희귀) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*3){
+        items.push('경험치 부스터 (희귀) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4){
+        items.push('승무원 경험치 부스터 (희귀) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94){
+        items.push('크레딧 부스터 (일반) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*2){
+        items.push('자유 경험치 부스터 (일반) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*3){
+        items.push('경험치 부스터 (일반) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4){
+        items.push('승무원 경험치 부스터 (일반) 15개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17){
+        items.push('크레딧 부스터 (일반) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*2){
+        items.push('자유 경험치 부스터 (일반) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*3){
+        items.push('경험치 부스터 (일반) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*4){
+        items.push('승무원 경험치 부스터 (일반) 20개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*4 + 1.39){
+        items.push('크레딧 부스터 (일반) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*4 + 1.39*2){
+        items.push('자유 경험치 부스터 (일반) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*4 + 1.39*3){
+        items.push('경험치 부스터 (일반) 25개');
+    }else if(randombooster < 2.08*4 + 1.25*4 + 0.42*4 + 4.86*4 + 2.92*4 + 0.97*4 + 6.94*4 + 4.17*4 + 1.39*4){
+        items.push('승무원 경험치 부스터 (일반) 25개');
+    }
+
+
+
+
+
+            
+ 
 
     let autoslider = document.getElementById('autoslide');
 
@@ -341,7 +505,16 @@ open.addEventListener('click', function() {
         }
         resultElement.innerText = `결과: ${items.join(', ')}`;
     }else if(slider.value == 2){
-        alert('개발중');
+        const items = t9();
+        const resultElement = document.getElementById('result');
+        if (items.some(item => item.includes('(X)') || item.includes('위장'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
     }
     
 });

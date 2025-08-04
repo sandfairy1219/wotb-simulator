@@ -1474,6 +1474,115 @@ function partycert(){
     return items;
 }
 
+function gift1(){
+    const items = [];
+
+    const randomcatball = Math.random() * 100;
+    if(randomcatball < 2){
+        items.push('고양이 워터볼')
+    }
+    const randombooster = Math.random() * 100;
+    if(randombooster < 13.61){
+        items.push('전투 경험치 부스터 5개 (희귀)');
+    }else if(randombooster < 13.61 *2){
+        items.push('크레딧 부스터 5개 (희귀)'); 
+    }else if(randombooster < 13.61 *3){
+        items.push('승무원 경험치 부스터 5개 (희귀)');
+    }else if(randombooster < 13.61 *4){
+        items.push('소모품 부스터 5개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17){
+        items.push('전투 경험치 부스터 10개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *2){
+        items.push('크레딧 부스터 10개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *3){
+        items.push('승무원 경험치 부스터 10개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *4){
+        items.push('소모품 부스터 10개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *4 + 2.72){
+        items.push('전투 경험치 부스터 15개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *4 + 2.72 *2){
+        items.push('크레딧 부스터 15개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *4 + 2.72 *3){
+        items.push('승무원 경험치 부스터 15개 (희귀)');
+    }else if(randombooster < 13.61 *4 + 8.17 *4 + 2.72 *4){
+        items.push('소모품 부스터 15개 (희귀)');
+    }
+    const randomgold = Math.random() * 100;
+    if(randomgold < 60,12){
+        items.push('골드 15개');
+        gold += 15;
+    }else if(randomgold < 60.12 + 30.06){
+        items.push('골드 60개');
+        gold += 60;
+    }else if(randomgold < 60.12 + 30.06 + 6.01){
+        items.push('골드 160개');
+        gold += 160;
+    }else if(randomgold < 60.12 + 30.06 + 6.01 + 1.20){
+        items.push('골드 650개');
+        gold += 650;
+    }else if(randomgold < 60.12 + 30.06 + 6.01 + 1.20 + 0.60){
+        items.push('골드 1650개');
+        gold += 1650;
+    }
+
+    const randomscert = Math.random() * 100;
+    if(randomscert < 4.9){
+        items.push('샌드박스 증서')
+    }
+    const randomcustom = Math.random() * 100;
+    if(randomcustom < 11.76){
+        items.push('커스터마이징 상자')
+    }
+    const randomcosmetics = Math.random() * 100;
+    if(randomcosmetics < 2.94){
+        items.push('Ichigo Shinohara 프로필 배경')
+    }else if(randomcosmetics < 2.94 *2){
+        items.push('Ichigo Shinohara 애니메이션 아바타')
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('고양이 워터볼') );
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
 
 const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');

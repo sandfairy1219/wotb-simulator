@@ -1474,6 +1474,105 @@ function partycert(){
     return items;
 }
 
+function goldgift1(){
+    const items = [];
+    items.push('고양이워터볼 선물 부적');
+    items.push('황금 태그');
+    const randomwaterball = Math.random() * 100;
+    if(randomwaterball < 5){
+        items.push('고양이 워터볼');
+    }else{
+        const randomcredit = Math.random() * 100;
+        if(randomcredit < 90.9){
+            items.push('크레딧 100000개');
+        }else if(randomcredit < 90.9 + 9.09){
+            items.push('크레딧 200000개');
+        }
+
+        items.push('자유 경험치 200 증서 9개');
+        
+        const randombooster = Math.random() * 100;
+        if(randombooster < 24.38){
+            items.push('자유 경험치 부스터 10개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38){
+            items.push('승무원 경험치 부스터 10개 (영웅))');
+        }else if(randombooster < 24.38 + 24.38 + 24.38){
+            items.push('크레딧 부스터 10개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2){
+            items.push('전투 경험치 부스터 10개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44){
+            items.push('자유 경험치 부스터 15개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44){
+            items.push('승무원 경험치 부스터 15개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44){
+            items.push('크레딧 부스터 15개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44 + 2.44){
+            items.push('전투 경험치 부스터 15개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44 + 2.44 + 1.22){
+            items.push('자유 경험치 부스터 20개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44 + 2.44 + 1.22 *2){
+            items.push('승무원 경험치 부스터 20개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44 + 2.44 + 1.22 *3){
+            items.push('크레딧 부스터 20개 (영웅)');
+        }else if(randombooster < 24.38 + 24.38 + 24.38 + 12.2 + 2.44 + 2.44 + 2.44 + 2.44 + 1.22 *4){
+            items.push('전투 경험치 부스터 20개 (영웅)');
+        }
+    }
+    const randomprofilebackground = Math.random() * 100;
+    if(randomprofilebackground < 2.38){
+        items.push('Natasha Sokolova 프로필 배경');
+    }else if(randomprofilebackground < 2.38 + 2.38){
+        items.push('Emily Lowenstein 프로필 배경');
+    }else if(randomprofilebackground < 2.38 + 2.38 + 2.38){
+        items.push('Natasha Sokolova 애니매이션 아바타');
+    }else if(randomprofilebackground < 2.38 + 2.38 + 2.38 + 2.38){
+        items.push('Emily Lowenstein 애니매이션 아바타');
+    }
+
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('고양이 워터볼')  );
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
 function gift1(){
     const items = [];
 
@@ -1613,6 +1712,14 @@ slider.addEventListener('input', function() {
         slid.innerText = '파티 증서'
         containerimg.src = "img/partycert.jpg";
         document.title = "파티 증서";
+    }else if(slider.value == 7){
+        slid.innerText = '황금 선물 상자 (2025-07-26 야옹 카페)';
+        containerimg.src = "img/goldgift1.jpg";
+        document.title = "황금 선물 상자 (2025-07-26 야옹 카페)";
+    }else if(slider.value == 8){
+        slid.innerText = '선물 상자 (2025-07-26 야옹 카페)';
+        containerimg.src = "img/gift1.jpg";
+        document.title = "선물 상자 (2025-07-26 야옹 카페)";
     }
 });
 
@@ -1679,7 +1786,29 @@ open.addEventListener('click', function() {
             resultElement.style.color = 'black';
         }
         resultElement.innerText = `결과: ${items.join(', ')}`;
-    }
+    }else if(slider.value == 7){
+        const items = goldgift1();
+        resultElement = document.getElementById('result');
+        if(items.some(item => item.includes('고양이 워터볼') )) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        }else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 8){
+        const items = gift1();
+        resultElement = document.getElementById('result');
+        if(items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') )) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        }else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
+    }   
 });
 
 

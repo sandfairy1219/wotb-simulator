@@ -3,6 +3,7 @@ let howmuch = 0;
 const container = document.getElementById('log-container');
 let tanks = [];
 let boxes = [];
+let gold = 0;
 const finaltanks = document.getElementById('tanks');
 
 const blackbox = document.querySelector('.blackbox');
@@ -27,6 +28,14 @@ function updateFinalTanks() {
 function addTank(tank) {
     tanks.push(tank);
     updateFinalTanks();
+}
+
+function addgold(amount) {
+    gold += amount;
+    updateFinalGold();
+}
+function updateFinalGold() {
+    finalgold.innerText = '획득한 골드: ' + gold.toLocaleString() + '개';
 }
 
 function kaleido1() {
@@ -113,9 +122,9 @@ function kaleido1() {
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25) {
         items.push('전차 구매 증서 1개 (희귀)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25) {
-        items.push('전차 연구 증서 1개 (영웅)');
+        items.push('전차 연구 증서 1개 (특급)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25 + 0.25) {
-        items.push('전차 구매 증서 1개 (영웅)');
+        items.push('전차 구매 증서 1개 (특급)');
     }
 
     const random3x = Math.floor(Math.random() * 100);
@@ -342,9 +351,9 @@ function kaleido2() {
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25) {
         items.push('전차 구매 증서 1개 (희귀)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25) {
-        items.push('전차 연구 증서 1개 (영웅)');
+        items.push('전차 연구 증서 1개 (특급)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25 + 0.25) {
-        items.push('전차 구매 증서 1개 (영웅)');
+        items.push('전차 구매 증서 1개 (특급)');
     }
 
 
@@ -490,29 +499,29 @@ function kaleido3() {
 
     const randombooster = Math.floor(Math.random() * 100);
     if (randombooster < 18) {
-        items.push('크레딧 부스터 1개 (영웅)');
+        items.push('크레딧 부스터 1개 (특급)');
     } else if (randombooster < 18 + 1.8) {
-        items.push('크레딧 부스터 2개 (영웅)');
+        items.push('크레딧 부스터 2개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2) {
-        items.push('크레딧 부스터 3개 (영웅)');
+        items.push('크레딧 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18) {
-        items.push('경험치 부스터 1개 (영웅)');
+        items.push('경험치 부스터 1개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('경험치 부스터 2개 (영웅)');
+        items.push('경험치 부스터 2개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) {
-        items.push('경험치 부스터 3개 (영웅)');
+        items.push('경험치 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18) {
-        items.push('자유 경험치 부스터 1개 (영웅)');
+        items.push('자유 경험치 부스터 1개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('자유 경험치 부스터 2개 (영웅)');
+        items.push('자유 경험치 부스터 2개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) {
-        items.push('자유 경험치 부스터 3개 (영웅)');
+        items.push('자유 경험치 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18) {
-        items.push('승무원 경험치 부스터 1개 (영웅)');
+        items.push('승무원 경험치 부스터 1개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('승무원 경험치 부스터 2개 (영웅)');
+        items.push('승무원 경험치 부스터 2개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) {
-        items.push('승무원 경험치 부스터 3개 (영웅)');
+        items.push('승무원 경험치 부스터 3개 (특급)');
     }
 
     const randomtankcertificate = Math.floor(Math.random() * 100)
@@ -525,9 +534,9 @@ function kaleido3() {
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25) {
         items.push('전차 구매 증서 1개 (희귀)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25) {
-        items.push('전차 연구 증서 1개 (영웅)');
+        items.push('전차 연구 증서 1개 (특급)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25 + 0.25) {
-        items.push('전차 구매 증서 1개 (영웅)');
+        items.push('전차 구매 증서 1개 (특급)');
     }
 
 
@@ -646,14 +655,19 @@ function kaleido4(){
     const randomgold = Math.floor(Math.random() * 100);
     if (randomgold < 27) {
         items.push('골드 1000개');
+        addgold(1000);
     } else if (randomgold < 27 + 1.5) {
         items.push('골드 2000개');
+        addgold(2000);
     } else if (randomgold < 27 + 1.5 + 0.75) {
         items.push('골드 5000개');
+        addgold(5000);
     } else if (randomgold < 27 + 1.5 + 0.75 + 0.45) {
         items.push('골드 7500개');
+        addgold(7500);
     } else if (randomgold < 27 + 1.5 + 0.75 + 0.45 + 0.3) {
         items.push('골드 10000개');
+        addgold(10000);
     }
 
     const random10x = Math.floor(Math.random() * 100);
@@ -676,29 +690,29 @@ function kaleido4(){
 
     const randombooster = Math.floor(Math.random() * 100);
     if (randombooster < 18) {
-        items.push('크레딧 부스터 3개 (영웅)');
+        items.push('크레딧 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8) {
-        items.push('크레딧 부스터 5개 (영웅)');
+        items.push('크레딧 부스터 5개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2) {
-        items.push('크레딧 부스터 7개 (영웅)');
+        items.push('크레딧 부스터 7개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18) {
-        items.push('경험치 부스터 3개 (영웅)');
+        items.push('경험치 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('경험치 부스터 5개 (영웅)');
+        items.push('경험치 부스터 5개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) {
-        items.push('경험치 부스터 7개 (영웅)');
+        items.push('경험치 부스터 7개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18) {
-        items.push('자유 경험치 부스터 3개 (영웅)');
+        items.push('자유 경험치 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('자유 경험치 부스터 5개 (영웅)');
+        items.push('자유 경험치 부스터 5개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) { 
-        items.push('자유 경험치 부스터 7개 (영웅)');
+        items.push('자유 경험치 부스터 7개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18) {
-        items.push('승무원 경험치 부스터 3개 (영웅)');
+        items.push('승무원 경험치 부스터 3개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8) {
-        items.push('승무원 경험치 부스터 5개 (영웅)');
+        items.push('승무원 경험치 부스터 5개 (특급)');
     } else if (randombooster < 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2 + 18 + 1.8 + 0.2) {
-        items.push('승무원 경험치 부스터 7개 (영웅)');
+        items.push('승무원 경험치 부스터 7개 (특급)');
     }
 
     const randomtankcertificate = Math.floor(Math.random() * 100)
@@ -711,9 +725,9 @@ function kaleido4(){
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25) {
         items.push('전차 구매 증서 1개 (희귀)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25) {
-        items.push('전차 연구 증서 1개 (영웅)');
+        items.push('전차 연구 증서 1개 (특급)');
     } else if (randomtankcertificate < 22.5 + 22.5 + 2.25 + 2.25 + 0.25 + 0.25) {
-        items.push('전차 구매 증서 1개 (영웅)');
+        items.push('전차 구매 증서 1개 (특급)');
     }
 
 
@@ -914,13 +928,13 @@ function bigboss(){
     }else if(randombooster < 13.89 * 4 + 8.33 * 4){
         items.push('자유 경험치 부스터 7개 (희귀)')
     }else if(randombooster < 13.89 * 4 + 8.33 * 4 + 2.78){
-        items.push('크레딧 부스터 7개 (영웅)')
+        items.push('크레딧 부스터 7개 (특급)')
     }else if(randombooster < 13.89 * 4 + 8.33 * 4 + 2.78 * 2){
-        items.push('승무원 경험치 부스터 7개 (영웅)')
+        items.push('승무원 경험치 부스터 7개 (특급)')
     }else if(randombooster < 13.89 * 4 + 8.33 * 4 + 2.78 * 3){
-        items.push('경험치 부스터 7개 (영웅)')
+        items.push('경험치 부스터 7개 (특급)')
     }else if(randombooster < 13.89 * 4 + 8.33 * 4 + 2.78 * 4){
-        items.push('자유 경험치 부스터 7개 (영웅)')
+        items.push('자유 경험치 부스터 7개 (특급)')
     }
 
     const randomgoldbooster = Math.random() * 100;
@@ -1043,18 +1057,25 @@ function bad(){
     const randomgold = Math.floor(Math.random() * 100);
     if(randomgold < 10.01){
         items.push('골드 100개')
+        addgold(100);
     }else if(randomgold < 10.01 + 5.01){    
         items.push('골드 200개')
+        addgold(200);
     }else if(randomgold < 10.01 + 5.01 + 4.00){
         items.push('골드 500개')
+        addgold(500);
     }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00){
         items.push('골드 1500개')
+        addgold(1500);
     }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50){
         items.push('골드 3000개')
+        addgold(3000);
     }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50 + 0.98){
         items.push('골드 5000개')
+        addgold(5000);
     }else if(randomgold < 10.01 + 5.01 + 4.00 + 3.00 + 1.50 + 0.98 + 0.50){
         items.push('골드 10000개')
+        addgold(10000);
     }
 
     const randomprofilebackground = Math.floor(Math.random() * 100);
@@ -1153,13 +1174,13 @@ function bad(){
     }else if(randombooster < 12.50 * 4 + 8.33 * 4){
         items.push('자유 경험치 부스터 15개 (희귀)')
     }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17){
-        items.push('크레딧 부스터 15개 (영웅)')
+        items.push('크레딧 부스터 15개 (특급)')
     }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 2){
-        items.push('승무원 경험치 부스터 15개 (영웅)')
+        items.push('승무원 경험치 부스터 15개 (특급)')
     }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 3){
-        items.push('경험치 부스터 15개 (영웅)')
+        items.push('경험치 부스터 15개 (특급)')
     }else if(randombooster < 12.50 * 4 + 8.33 * 4 + 4.17 * 4){
-        items.push('자유 경험치 부스터 15개 (영웅)')
+        items.push('자유 경험치 부스터 15개 (특급)')
     }
 
     const randomfxp = Math.floor(Math.random() * 100);
@@ -1367,13 +1388,13 @@ function gravity(){
 
     const randombooster = Math.random() * 100;
     if(randombooster < 2.78){
-        items.push('크레딧 부스터 3개 (영웅)')
+        items.push('크레딧 부스터 3개 (특급)')
     }else if(randombooster < 2.78 * 2){
-        items.push('승무원 경험치 부스터 3개 (영웅)')
+        items.push('승무원 경험치 부스터 3개 (특급)')
     }else if(randombooster < 2.78 * 3){
-        items.push('경험치 부스터 3개 (영웅)')
+        items.push('경험치 부스터 3개 (특급)')
     }else if(randombooster < 2.78 * 4){
-        items.push('자유 경험치 부스터 3개 (영웅)')
+        items.push('자유 경험치 부스터 3개 (특급)')
     }else if(randombooster < 2.78 * 4 + 8.33){
         items.push('크레딧 부스터 5개 (희귀)')
     }else if(randombooster < 2.78 * 4 + 8.33 * 2){
@@ -1677,7 +1698,7 @@ function wasteland(){
 
     const randomxpbooster = Math.random() * 100;
     if(randomxpbooster < 33.33){
-        items.push('경험치 부스터 5개 (영웅)')
+        items.push('경험치 부스터 5개 (특급)')
     }else if(randomxpbooster < 33.33 *2){
         items.push('경험치 부스터 5개 (희귀)')
     } else if(randomxpbooster < 33.33 *3){
@@ -1686,7 +1707,7 @@ function wasteland(){
     
     const randomcreditbooster = Math.random() * 100;    
     if(randomcreditbooster < 33.33){
-        items.push('크레딧 부스터 5개 (영웅)')
+        items.push('크레딧 부스터 5개 (특급)')
     }else if(randomcreditbooster < 33.33 *2){
         items.push('크레딧 부스터 5개 (희귀)')
     }else if(randomcreditbooster < 33.33 *3){   
@@ -1695,7 +1716,7 @@ function wasteland(){
 
     const randomfxpbooster = Math.random() * 100;
     if(randomfxpbooster < 33.33){
-        items.push('자유 경험치 부스터 5개 (영웅)')
+        items.push('자유 경험치 부스터 5개 (특급)')
     }else if(randomfxpbooster < 33.33 *2){  
         items.push('자유 경험치 부스터 5개 (희귀)')
     }else if(randomfxpbooster < 33.33 *3){
@@ -1849,7 +1870,7 @@ function defender(){
     }
     const randomcreditbooster = Math.random() * 100;
     if(randomcreditbooster < 33.33){
-        items.push('크레딧 부스터 5개 (영웅)')
+        items.push('크레딧 부스터 5개 (특급)')
     }else if(randomcreditbooster < 33.33 *2){
         items.push('크레딧 부스터 5개 (희귀)')
     } else if(randomcreditbooster < 33.33 *3){
@@ -1857,7 +1878,7 @@ function defender(){
     }
     const randomfxpbooster = Math.random() * 100;
     if(randomfxpbooster < 33.33){
-        items.push('자유 경험치 부스터 5개 (영웅)')
+        items.push('자유 경험치 부스터 5개 (특급)')
     }else if(randomfxpbooster < 33.33 *2){
         items.push('자유 경험치 부스터 5개 (희귀)') 
     }else if(randomfxpbooster < 33.33 *3){  
@@ -1865,7 +1886,7 @@ function defender(){
     }
     const randomxpbooster = Math.random() * 100;
     if(randomxpbooster < 33.33){
-        items.push('경험치 부스터 5개 (영웅)')
+        items.push('경험치 부스터 5개 (특급)')
     }else if(randomxpbooster < 33.33 *2){
         items.push('경험치 부스터 5개 (희귀)')
     }else if(randomxpbooster < 33.33 *3){
@@ -2052,13 +2073,13 @@ function esports(){
     
     const randombooster = Math.random() * 100;
     if(randombooster < 2.78){
-        items.push('자유 경험치 부스터 10개 (영웅)')
+        items.push('자유 경험치 부스터 10개 (특급)')
     }else if(randombooster < 2.78 *2){
-        items.push('전투 경험치 부스터 10개 (영웅)')
+        items.push('전투 경험치 부스터 10개 (특급)')
     }else if(randombooster < 2.78 *3){  
-        items.push('크레딧 부스터 10개 (영웅)')
+        items.push('크레딧 부스터 10개 (특급)')
     }else if(randombooster < 2.78 *4){
-        items.push('승무원 경험치 부스터 10개 (영웅)')
+        items.push('승무원 경험치 부스터 10개 (특급)')
     }else if(randombooster < 2.78 *4 + 8.33){
         items.push('자유 경험치 부스터 10개 (희귀)')
     }else if(randombooster < 2.78 *4 + 8.33 *2){
@@ -2136,6 +2157,256 @@ function esports(){
 
 }
 
+function strongshot(){
+    const items = [];
+    
+
+    const randomitem = Math.random() * 100;
+    if(randomitem < 93){
+        items.push('강력한 일격 부적')
+        const randomresource = Math.random() * 100;
+        if(randomresource < 50/3){
+            const randomcredit = Math.floor(Math.random() * 100);
+            if (randomcredit < 84.98924731182796){
+                items.push('크레딧 120,000개')
+            }else if(randomcredit < 84.98924731182796 + 12){
+                items.push('크레딧 250,000개')
+            }else if(randomcredit < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('크레딧 550,000개')
+            }
+            const randomgold = Math.random() * 100;
+            if(randomgold < 84.98924731182796){
+                items.push('골드 500개')
+                addgold(500);
+            }else if(randomgold < 84.98924731182796 + 12){
+                items.push('골드 750개')
+                addgold(750);
+            }else if(randomgold < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('골드 1000개')
+                addgold(1000);
+            }
+        }else if(randomresource < 50/3 + 50/3){
+            const randomgoldbooster = Math.random() * 100;
+            if(randomgoldbooster < 84.98924731182796){
+                items.push('골드 부스터 20개')
+            }else if(randomgoldbooster < 84.98924731182796 + 12){
+                items.push('골드 부스터 40개')
+            }else if(randomgoldbooster < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('골드 부스터 60개')
+            }
+            const randomcreditbooster = Math.random() * 100;
+            if(randomcreditbooster < 84.98924731182796){
+                items.push('크레딧 부스터 10개 (특급)')
+            }else if(randomcreditbooster < 84.98924731182796 + 12){
+                items.push('크레딧 부스터 20개 (특급)')
+            }else if(randomcreditbooster < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('크레딧 부스터 30개 (특급)')
+            }
+        }else if(randomresource < 50/3 + 50/3 + 100/3){
+            const randomfxp = Math.random() * 100;
+            if(randomfxp < 84.98924731182796){
+                items.push('자유경험치 200 증서 5개')
+            }else if(randomfxp < 84.98924731182796 + 12){
+                items.push('자유경험치 200 증서 10개')
+            }else if(randomfxp < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('자유경험치 200 증서 15개')
+            }
+            const randombooster = Math.random() * 100;
+            if(randombooster < 84.98924731182796/3){
+                items.push('자유 경험치 부스터 5개 (특급)')
+            }else if(randombooster < 84.98924731182796/3 + 4){
+                items.push('자유 경험치 부스터 10개 (특급)')
+            }else if(randombooster < 84.98924731182796/3 + 4 + 3.010752688172043/3){
+                items.push('자유 경험치 부스터 15개 (특급)')
+            }else if(randombooster < 84.98924731182796/3 *2 + 4 + 3.010752688172043/3){
+                items.push('승무원 경험치 부스터 5개 (특급)')
+            }else if(randombooster < 84.98924731182796/3 *2 + 4 *2 + 3.010752688172043/3){
+                items.push('승무원 경험치 부스터 10개 (특급)')
+            }else if(randombooster < 84.98924731182796/3 *2 + 4 *2 + 3.010752688172043/3 *2){
+                items.push('승무원 경험치 부스터 15개 (특급)')
+            }else if(randombooster < 84.98924731182796 + 4 *2 + 3.010752688172043){
+                items.push('전투 경험치 부스터 5개 (특급)')
+            }else if(randombooster < 84.98924731182796 + 4 *3 + 3.010752688172043){
+                items.push('전투 경험치 부스터 10개 (특급)')
+            }else if(randombooster < 84.98924731182796 + 4 *3 + 3.010752688172043 *2){
+                items.push('전투 경험치 부스터 15개 (특급)')
+            }
+        }else if(randomresource < 50/3 + 50/3 + 100/3 + 100/3){
+            const randomnxp = Math.random() * 100;
+            if(randomnxp < 84.98924731182796){
+                items.push('경험치 3배 5개')
+            }else if(randomnxp < 84.98924731182796 + 12){
+                items.push('경험치 4배 4개')
+            }else if(randomnxp < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('경험치 5배 3개')
+            }
+            const randompremium = Math.random() * 100;
+            if(randompremium < 84.98924731182796){
+                items.push('프리미엄 계정 1일')
+            }else if(randompremium < 84.98924731182796 + 12){
+                items.push('프리미엄 계정 2일')
+            }else if(randompremium < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('프리미엄 계정 3일')
+            }
+            const randomgold = Math.random() * 100;
+            if(randomgold < 84.98924731182796){
+                items.push('골드 100개')
+                addgold(100);
+            }else if(randomgold < 84.98924731182796 + 12){
+                items.push('골드 200개')
+                addgold(200);
+            }else if(randomgold < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('골드 300개')
+                addgold(300);
+            }
+            const randomcredit = Math.floor(Math.random() * 100);
+            if (randomcredit < 84.98924731182796){
+                items.push('크레딧 40,000개')
+            }else if(randomcredit < 84.98924731182796 + 12){
+                items.push('크레딧 80,000개')
+            }else if(randomcredit < 84.98924731182796 + 12 + 3.010752688172043){
+                items.push('크레딧 120,000개')
+            }
+        }
+    }else {
+        const randomtank = Math.floor(Math.random() * 100);
+        if (randomtank < 0.8571428571428571){
+            items.push('(X) 114 SP2')
+            addTank('(X) 114 SP2');
+        }else if(randomtank < 0.8571428571428571 *2){
+            items.push('(X) AMX M4 mle. 54')
+            addTank('(X) AMX M4 mle. 54');
+        }else if(randomtank < 0.8571428571428571 *3){
+            items.push('(X) VK 90.01 9P)')
+            addTank('(X) VK 90.01 9P)');
+        }else if(randomtank < 0.8571428571428571 *4){
+            items.push('(X) FV217 Badger')
+            addTank('(X) FV217 Badger');
+        }else if(randomtank < 0.8571428571428571 *5){
+            items.push('(X) Object 268/4')
+            addTank('(X) Object 268/4');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714){
+            items.push('(X) Kpz 70')
+            addTank('(X) Kpz 70');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *2){
+            items.push('(IX) WZ-114')
+            addTank('(IX) WZ-114');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *3){
+            items.push('(IX) BZ-176')
+            addTank('(IX) BZ-176');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *4){
+            items.push('(IX) Erich Konzept I')
+            addTank('(IX) Erich Konzept I');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5){    
+            items.push('(IX) Object 452K')
+            addTank('(IX) Object 452K');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571){
+            items.push('(VIII) Skoda T 56')
+            addTank('(VIII) Skoda T 56');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *2){
+            items.push('(VIII) ISU-130')
+            addTank('(VIII) ISU-130');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *3){
+            items.push('(VIII) Skorpion G')
+            addTank('(VIII) Skorpion G');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *4){
+            items.push('(VIII) VK 168.01 (P)')
+            addTank('(VIII) VK 168.01 (P)');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *5){
+            items.push('(VIII) Type 57')
+            addTank('(VIII) Type 57');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *6){
+            items.push('(VIII) Type 5 Ka-Ri')
+            addTank('(VIII) Type 5 Ka-Ri');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *7){ 
+            items.push('(VIII) Caliban')
+            addTank('(VIII) Caliban');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *8){
+            items.push('(VIII) Chimera')
+            addTank('(VIII) Chimera');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *9){
+            items.push('(VIII) Obj. 252U')
+            addTank('(VIII) Obj. 252U');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10){
+            items.push('(VIII) SU-130PM')
+            addTank('(VIII) SU-130PM');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571){
+            items.push('(VII) WZ Blaze')
+            addTank('(VII) WZ Blaze');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *2){
+            items.push('(VII) ISU-122S')
+            addTank('(VII) ISU-122S');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *3){
+            items.push('(VII) IS-2 shielded')
+            addTank('(VII) IS-2 shielded');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *4){
+            items.push('(VII) SU-122-44')
+            addTank('(VII) SU-122-44');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *5){
+            items.push('(VII) Tankenstein')
+            addTank('(VII) Tankenstein');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *6){
+            items.push('(VII) Smasher')
+            addTank('(VII) Smasher');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *7){
+            items.push('(VII) Lycan')
+            addTank('(VII) Lycan');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *8 ){
+            items.push('(VII) IS-2 (1945)')
+            addTank('(VII) IS-2 (1945)');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *9){
+            items.push('(VI) Dicker Max')
+            addTank('(VI) Dicker Max');
+        }else if(randomtank < 0.8571428571428571 *5 + 2.714285714285714 *5 + 3.571428571428571 *10 + 4.571428571428571 *10){
+            items.push('(VI) SU-100Y')
+            addTank('(VI) SU-100Y');
+        }
+
+    }
+    let autoslider = document.getElementById('autoslide');
+
+    function addLogItem(items, container) {
+        const el = document.createElement('div');
+        const hasSpecialItem = items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)') || item.includes('(V)'));
+    
+    // 특별 아이템이 있으면 스타일 적용
+    if (hasSpecialItem) {
+        el.style.color = 'red';
+        el.style.backgroundColor = 'aqua';
+        el.style.padding = '10px';
+        el.style.margin = '5px 0';
+        el.style.borderRadius = 'var(--border-radius)';
+    }
+        el.textContent = items.join(', ');
+        container.appendChild(el);
+
+
+        if (autoslider && autoslider.checked) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    let container = document.getElementById('log-container');
+    addLogItem(items, container);
+
+    window.addEventListener('scroll', function () {
+        let settingsButton = document.getElementById('settings');
+        let settingsPage = document.getElementById('settingsPage');
+        let rect = settingsButton.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight || rect.left < 0 || rect.right > window.innerWidth) {
+            settingsPage.style.display = 'none';
+        }
+    });
+
+    howmuch++;
+    times.innerText = `상자를 깐 횟수: ${howmuch}회`;
+
+
+
+    return items;
+}
+
 // 확률표 끝
 
 const slider = document.getElementById('slider');
@@ -2187,6 +2458,10 @@ slider.addEventListener('input', function () {
         slid.innerText = 'esports 상자'
         containerimg.src = "img/esports.jpg";
         document.title = 'esports 상자'
+    } else if (slider.value == 12){
+        slid.innerText = '강력한 일격 상자'
+        containerimg.src = "img/strongshot.jpg";
+        document.title = '강력한 일격 상자'
     }
 });
 
@@ -2314,8 +2589,19 @@ open.addEventListener('click', function () {
             resultElement.style.color = 'black';
         }
         resultElement.innerText = `결과: ${items.join(', ')}`;
+    }else if(slider.value == 12){
+        const items = strongshot();
+        const resultElement = document.getElementById('result');
+        if( items.some(item => item.includes('(X)') || item.includes('(IX)') || item.includes('(VIII)') || item.includes('(VII)') || item.includes('(VI)'))) {
+            resultElement.style.color = 'red';
+            resultElement.style.backgroundColor = 'aqua';
+        } else {
+            resultElement.style.backgroundColor = 'white';
+            resultElement.style.color = 'black';
+        }
+        resultElement.innerText = `결과: ${items.join(', ')}`;
     }
-});
+    });
 
 
 

@@ -1683,6 +1683,70 @@ function gift1(){
     return items;
 }
 
+function parcel(){
+    const items = [];
+    const randomwaffen = Math.random() * 100;
+    if(randomwaffen <= 0.1){
+        items.push('(X) Waffen F1.0')
+        addTank('Waffen F1.0');
+    }
+    const randomanimation = Math.random() * 100;
+    if(randomanimation <= 0.1){
+        items.push('푹신한 양탄자 애니메이션 아바타')
+    }
+    const randomscissors = Math.random() * 100;
+    if(randomscissors <= 3){
+        items.push('가위')
+    }
+    const randomtanks = Math.random() * 100;
+    if(randomtanks <= 0.16){
+        items.push('(X) Lion')
+        addTank('Lion');
+    }else if(randomtanks <= 0.16 *2){
+        items.push('(X) AMX M4 mle. 54')
+        addTank('AMX M4 mle. 54');
+    }else if(randomtanks <= 0.16 *3){
+        items.push('(X) VK 90.01 (P)')
+        addTank('VK 90.01 (P)');
+    }else if(randomtanks <= 0.16 *4){
+        items.push('(X) XM66F')
+        addTank('XM66F');
+    }else if(randomtanks <= 0.16 *5){
+        items.push('(X) Obj.777 II')
+        addTank('Obj.777 II');
+    }else if(randomtanks <= 0.16 *6){
+        items.push('(IX) BZ-176 ')
+        addTank('BZ-176');
+    }else if(randomtanks <= 0.16 *7){
+        items.push('(IX) Erich Konzept I')
+        addTank('Erich Konzept I');
+    }else if(randomtanks <= 0.16 *8){
+        items.push('(IX) FVE Defender')
+        addTank('FVE Defender');
+    }else if(randomtanks <= 0.16 *9){
+        items.push('(IX) Cobra')
+        addTank('Cobra');
+    }else if(randomtanks <= 0.16 *10){
+        items.push('(IX) ATAC')
+        addTank('ATAC');
+    }else if(randomtanks <= 0.16 *11){
+        items.push('(IX) Object 752 ')
+        addTank('Object 752');
+    }else if(randomtanks <= 0.16 *12){
+        items.push('(VIII) Bisonte C45')
+        addTank('Bisonte C45');
+    }else if(randomtanks <= 0.16 *13){
+        items.push('(VIII) SMV Vipera')
+        addTank('SMV Vipera');
+    }else if(randomtanks <= 0.16 *14){
+        items.push('(VIII) Sentinelle')
+        addTank('Sentinelle');
+    }else if(randomtanks <= 0.16 *15){
+        items.push('(VIII) Sentinelle')
+        addTank('Sentinelle');
+    }
+}
+
 const slider = document.getElementById('slider');
 const slid = document.getElementById('slid');
 
@@ -1720,6 +1784,14 @@ slider.addEventListener('input', function() {
         slid.innerText = '선물 상자 (2025-07-26 야옹 카페)';
         containerimg.src = "img/gift1.jpg";
         document.title = "선물 상자 (2025-07-26 야옹 카페)";
+    }else if(slider.value == 9){
+        slid.innerText = '택배 보관함 (2025 연말 유쾌한 우체국 이벤트)';
+        containerimg.src = "img/parcel.jpg";
+        document.title = "택배 보관함 (2025 연말 유쾌한 우체국 이벤트)";
+    }else if(slider.value == 10){
+        slid.innerText = '소포 (2025 연말 유쾌한 유체국 이벤트)';
+        containerimg.src = "img/package.jpg";
+        document.title = "소포 (2025 연말 유쾌한 유체국 이벤트)";
     }
 });
 
